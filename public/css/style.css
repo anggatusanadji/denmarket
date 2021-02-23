@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* The hero image */
+.hero .img img{
+    width: 100%;
+}
+
+.row {
+	display: flex;
+	flex: 0 1 auto;
+	flex-direction: row;
+	flex-wrap: wrap-reverse;
+}
+[class*='col-'] {
+	flex: 1;
+}
+
+@media (max-width: 544px) { 
+    
+    .reverse-column {
+        flex-direction: row-reverse;
+    }
+    .col, [class*='col-'] {
+        -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+        max-width: 100%;	
+    }
+	.col-3 {
+		-ms-flex-preferred-size: 25%;
+		flex-basis: 25%;
+		max-width: 25%;	
+	}
+    .hero-text{
+        margin-top: 100px;
+    }
+    .hero .img img{
+        margin-top: 20px;
+    }
+}
