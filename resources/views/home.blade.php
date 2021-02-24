@@ -45,22 +45,113 @@
         <div class="row justify-content-center">
             <div class="card-deck col-lg-12">
                 <div class="card col-lg-6 col-12">
-                    <img src="{{ asset('image/futsal1.jpg') }}" alt="" class="w-100 h-100">
+                    <img src="{{ asset('image/futsal1.png') }}" alt="" class="w-100 h-100">
                 </div>
                 <div class="card col-lg-6 col-12">
-                    <img src="{{ asset('image/futsal2.jpg') }}" alt="" class="w-100 h-100">
-                </div>
-
-                <div class="card col-lg-6 col-12">
-                    <img src="{{ asset('image/futsal3.jpg') }}" alt="" class="w-100 h-100">
+                    <img src="{{ asset('image/futsal2.png') }}" alt="" class="w-100 h-100">
                 </div>
 
                 <div class="card col-lg-6 col-12">
-                    <img src="{{ asset('image/futsal4.jpg') }}" alt="" class="w-100 h-100">
+                    <img src="{{ asset('image/futsal3.png') }}" alt="" class="w-100 h-100">
+                </div>
+
+                <div class="card col-lg-6 col-12">
+                    <img src="{{ asset('image/futsal4.png') }}" alt="" class="w-100 h-100">
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="button-buy mt-2 mx-auto mt-3">
+                <a type="button" class="btn mr-2" ><i class="fas fa-chevron-down" style="color:#fff;"></i></a>
+                <a class="font-weight-normal mr-2">Show More</a>
+                <img src="{{ asset('image/line.svg') }}" alt="" style="width:30px;">
+            </div>
+        </div>
+       
     </div>
+
+    {{-- testimonials --}}
+    <section class="testimonials">
+        <div class="container">
+            <div class="heading wow fadeIn text-center">
+                <h2>Our
+                    <span>Testimonials</span></h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and type setting industry
+                    when an unknown printer took
+                    <br>
+                    a galley of type and scrambled it to make a type specimen book It has survived
+                    not only five centuries.</p>
+            </div>
+            <div class="row">
+                <!-- Box-1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="box d-flex align-items-center wow fadeInLeft">
+                        <div class="content">
+                            <h3>Your Name
+                                <span>Graphic Designer</span></h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and type setting industry when an unknown printer</p>
+                            <div class="social d-flex">
+                                <a href="#0" class="icon d-flex align-items-center justify-content-center">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#0" class="icon d-flex align-items-center justify-content-center">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#0" class="icon d-flex align-items-center justify-content-center">
+                                    <i class="fab fa-dribbble"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="image"><img src="https://i.ibb.co/8x9xK4H/team.jpg" alt="" class="img-fluid"></div>
+                    </div>
+                </div>
+                <!-- Box-2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="box d-flex align-items-center wow fadeInRight">
+                        <div class="content">
+                            <h3>Your Name
+                                <span>Graphic Designer</span></h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and type setting industry when an unknown printer</p>
+                            <div class="social d-flex">
+                                <a href="#0" class="icon d-flex align-items-center justify-content-center">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#0" class="icon d-flex align-items-center justify-content-center">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#0" class="icon d-flex align-items-center justify-content-center">
+                                    <i class="fab fa-dribbble"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="image"><img src="https://i.ibb.co/8x9xK4H/team.jpg" alt="" class="img-fluid"></div>
+                    </div>
+                </div>
+                <!-- Box-3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="box d-flex align-items-center wow fadeInLeft">
+                        <div class="content">
+                            <h3>Your Name
+                                <span>Graphic Designer</span></h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and type setting industry when an unknown printer</p>
+                            <div class="social d-flex">
+                                <a href="#0" class="icon d-flex align-items-center justify-content-center">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#0" class="icon d-flex align-items-center justify-content-center">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#0" class="icon d-flex align-items-center justify-content-center">
+                                    <i class="fab fa-dribbble"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="image"><img src="https://i.ibb.co/8x9xK4H/team.jpg" alt="" class="img-fluid"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <div class="discount">
         <div class="card">
@@ -73,17 +164,11 @@
                     <p class="font-weight-normal text-discount">Come on, choose your shoes immediately</p>
                     <div class="button-buy mt-2">
                         <a type="button" class="btn mr-2" ><i class="fas fa-plus" style="color:#fff;"></i></a>
-                        <a class="font-weight-normal mr-2">Buy Now</a>
+                        <a class="font-weight-normal mr-2 button-buy">Buy Now</a>
                         <img src="{{ asset('image/line.svg') }}" alt="" style="width:30px;">
                     </div>
                 </div>
-                <div class="col-lg-12 show">
-                    <a type="button" class="btn mr-2" ><i class="fas fa-chevron-down" style="color:#fff;"></i></a>
-                    <a class="font-weight-normal mr-2">Show More</a>
-                    <img src="{{ asset('image/line.svg') }}" alt="" style="width:30px;">
-                </div>
-            </div>
-           
+            </div>       
         </div>
     </div>
 @endsection

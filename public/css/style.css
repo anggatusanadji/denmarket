@@ -59,7 +59,8 @@
     margin-top: 80px;
 }
 .trending .row .card-deck .card{
-    background-color: #F4f4f4;
+    background-color: #fff;
+    box-shadow: 5px 5px 10px #f4f4f4;
 }
 .trending .trending-title{
     font-size:40px;
@@ -74,11 +75,130 @@
     font-size: 26px; 
 }
 .discount .text-discount{
-    font-size: 14px; 
+    font-size: 16px; 
 }
 .discount p{
     line-height: 10px; 
 }
+
+/* Testimonials */
+a,
+a:hover,
+a:focus,
+a:active {
+    text-decoration: none;
+    outline: none;
+}
+
+a,
+a:active,
+a:focus {
+    color: #6f6f6f;
+    text-decoration: none;
+    transition-timing-function: ease-in-out;
+    -ms-transition-timing-function: ease-in-out;
+    -moz-transition-timing-function: ease-in-out;
+    -webkit-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
+    transition-duration: .2s;
+    -ms-transition-duration: .2s;
+    -moz-transition-duration: .2s;
+    -webkit-transition-duration: .2s;
+    -o-transition-duration: .2s;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+img {
+max-width: 100%;
+height: auto;
+}
+section {
+    padding: 60px 0;
+}
+.testimonials {
+padding: 120px 0 10px;
+}
+.testimonials .heading {
+margin-bottom: 60px;
+}
+.testimonials .heading h2 {
+font-size: 30px;
+font-weight: 700;
+color: #313e4b;
+margin-bottom: 20px;
+}
+.testimonials .heading h2 span {
+font-weight: 300;
+color: #FF4A4A;
+margin: 0;
+
+}
+.testimonials .heading p {
+font-size: 16px;
+font-weight: 300;
+line-height: 26px;
+margin: 0;
+color: #727f8c;
+}
+.testimonials .box {
+box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+padding: 40px;
+border-radius: 15px;
+margin-bottom: 40px;
+transition: all 0.4s ease-in-out;
+}
+.testimonials .box h3 {
+font-size: 18px;
+font-weight: 500;
+color: #313e4b;
+}
+.testimonials .box:hover {
+transform: translateY(-10px);
+}
+.testimonials .box h3 span {
+font-size: 13px;
+font-weight: 400;
+color: #FF4A4A;
+margin-left: 10px;
+}
+.testimonials .box p {
+font-size: 15px;
+font-weight: 300;
+line-height: 24px;
+margin: 0;
+color: #727f8c;
+margin-bottom: 20px;
+margin-top: 10px;
+padding-right: 20px;
+}
+.testimonials .box .image img {
+width: 200px;
+border-radius: 50%;
+margin: 0;
+padding: 0;
+display: inline-block;
+}
+.testimonials .box .icon {
+border: 1px solid #eee;
+color: #777777;
+width: 35px;
+height: 35px;
+border-radius: 50%;
+display: inline-block;
+margin-right: 10px;
+text-decoration: none;
+transition: all 0.3s ease-in-out;
+}
+.testimonials .box .icon:hover {
+color: #ffffff;
+border: 1px solid #FF4A4A;
+background: #FF4A4A;
+}
+
 
 
 
@@ -144,9 +264,19 @@
     }
     .text-quality{
         font-size : 13px; 
-    }
-    
+    }   
     .trending .row .trending-title{
         font-size: 28px;
+    }
+    .discount .title-discount{
+        font-size: 20px;
+        line-height: 20px;
+    }
+    .discount .text-discount{
+        font-size: 13px;
+        line-height: 20px;
+    }
+    .discount .button-buy{
+        font-size: 13px;
     }
 }
