@@ -49,6 +49,18 @@
             <!-- end nav -->
             
         </div>
+
+        <div class="container">
+            <img src="{{asset('image/about-hero.png')}}" alt="">
+            <div class="container d-flex justify-content-center align-items-center">
+                <div class="row container-about">
+                    <div class="card p-5 col-lg-12" style="width: 70vw">
+                        <h3 class="card-title">Special title treatment</h3>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- end container -->
 
     <!-- Optional JavaScript -->

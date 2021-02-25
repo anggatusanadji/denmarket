@@ -90,7 +90,7 @@
                         <div class="card-deck">
                             <div class="card product-card">
                                 <div class="imgBox">
-                                    <img src="{{ asset('image/futsal4.png') }}" alt="" class="shoe">
+                                    <img src="{{ asset('image/product image/futsal/futsal4.png') }}" alt="" class="shoe">
                                 </div>
                                 <div class="contentBox">
                                     <h3>Football Shoes</h3>
@@ -100,7 +100,7 @@
                             </div>
                             <div class="card product-card">
                                 <div class="imgBox">
-                                    <img src="{{ asset('image/futsal4.png') }}" alt="" class="shoe">
+                                    <img src="{{ asset('image/product image/futsal/futsal4.png') }}" alt="" class="shoe">
                                 </div>
                                 <div class="contentBox">
                                     <h3>Football Shoes</h3>
@@ -110,7 +110,7 @@
                             </div>
                             <div class="card product-card">
                                 <div class="imgBox">
-                                    <img src="{{ asset('image/futsal4.png') }}" alt="" class="shoe">
+                                    <img src="{{ asset('image/product image/futsal/futsal4.png') }}" alt="" class="shoe">
                                 </div>
                                 <div class="contentBox">
                                     <h3>Football Shoes</h3>
@@ -120,7 +120,7 @@
                             </div>
                             <div class="card product-card">
                                 <div class="imgBox">
-                                    <img src="{{ asset('image/futsal4.png') }}" alt="" class="shoe">
+                                    <img src="{{ asset('image/product image/futsal/futsal4.png') }}" alt="" class="shoe">
                                 </div>
                                 <div class="contentBox">
                                     <h3>Football Shoes</h3>
@@ -135,7 +135,7 @@
                         <div class="card-deck">
                             <div class="card product-card">
                                 <div class="imgBox">
-                                    <img src="{{ asset('image/futsal4.png') }}" alt="" class="shoe">
+                                    <img src="{{ asset('image/product image/futsal/futsal4.png') }}" alt="" class="shoe">
                                 </div>
                                 <div class="contentBox">
                                     <h3>Football Shoes</h3>
@@ -145,7 +145,7 @@
                             </div>
                             <div class="card product-card">
                                 <div class="imgBox">
-                                    <img src="{{ asset('image/futsal4.png') }}" alt="" class="shoe">
+                                    <img src="{{ asset('image/product image/futsal/futsal4.png') }}" alt="" class="shoe">
                                 </div>
                                 <div class="contentBox">
                                     <h3>Football Shoes</h3>
@@ -155,7 +155,7 @@
                             </div>
                             <div class="card product-card">
                                 <div class="imgBox">
-                                    <img src="{{ asset('image/futsal4.png') }}" alt="" class="shoe">
+                                    <img src="{{ asset('image/product image/futsal/futsal4.png') }}" alt="" class="shoe">
                                 </div>
                                 <div class="contentBox">
                                     <h3>Football Shoes</h3>
@@ -165,7 +165,7 @@
                             </div>
                             <div class="card product-card">
                                 <div class="imgBox">
-                                    <img src="{{ asset('image/futsal4.png') }}" alt="" class="shoe">
+                                    <img src="{{ asset('image/product image/futsal/futsal4.png') }}" alt="" class="shoe">
                                 </div>
                                 <div class="contentBox">
                                     <h3>Football Shoes</h3>
@@ -180,7 +180,7 @@
                         <div class="card-deck">
                             <div class="card product-card">
                                 <div class="imgBox">
-                                    <img src="{{ asset('image/futsal4.png') }}" alt="" class="shoe">
+                                    <img src="{{ asset('image/product image/futsal/futsal4.png') }}" alt="" class="shoe">
                                 </div>
                                 <div class="contentBox">
                                     <h3>Football Shoes</h3>
@@ -190,7 +190,7 @@
                             </div>
                             <div class="card product-card">
                                 <div class="imgBox">
-                                    <img src="{{ asset('image/futsal4.png') }}" alt="" class="shoe">
+                                    <img src="{{ asset('image/product image/futsal/futsal4.png') }}" alt="" class="shoe">
                                 </div>
                                 <div class="contentBox">
                                     <h3>Football Shoes</h3>
@@ -200,7 +200,7 @@
                             </div>
                             <div class="card product-card">
                                 <div class="imgBox">
-                                    <img src="{{ asset('image/futsal4.png') }}" alt="" class="shoe">
+                                    <img src="{{ asset('image/product image/futsal/futsal4.png') }}" alt="" class="shoe">
                                 </div>
                                 <div class="contentBox">
                                     <h3>Football Shoes</h3>
@@ -210,7 +210,7 @@
                             </div>
                             <div class="card product-card">
                                 <div class="imgBox">
-                                    <img src="{{ asset('image/futsal4.png') }}" alt="" class="shoe">
+                                    <img src="{{ asset('image/product image/futsal/futsal4.png') }}" alt="" class="shoe">
                                 </div>
                                 <div class="contentBox">
                                     <h3>Football Shoes</h3>

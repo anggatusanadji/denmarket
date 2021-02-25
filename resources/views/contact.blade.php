@@ -51,7 +51,14 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="row">
-
+                            <div class="card-deck">
+                                <div class="card" style="width: 18rem;">
+                                    <i class="fas fa-mobile"></i>
+                                    <div class="card-body">
+                                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    </div>
+                                  </div>
+                            </div>
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -71,11 +78,19 @@
                                 <p class="email-text">denmarket@gmail.com</p>
                             </div>
                         </div>
-                        <p class="contact-text mt-3">Send Message</p>
-                        <p class="input-nama">Nama</p>
-                        <input >
-                        <p class="input-email">Email</p>
-                        <p class="input-message">Message</p>
+                        <p class="contact-text mt-4">Send Message</p>
+                        <div class="form-group">
+                            <label for="nama">Nama</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="nama">Email</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="nama">Message</label>
+                            <input type="text" class="form-control">
+                        </div>
                     </div>
                 </div>
             </div>
