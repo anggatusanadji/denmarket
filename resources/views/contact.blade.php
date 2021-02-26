@@ -9,7 +9,7 @@
             <div class="col-lg-6">
                 <div class="row px-4 d-flex justify-content-center all-card border">
                     <div class="card-deck">
-                        <div class="card col-6 mt-4" style="width: 18rem;">
+                        <div class="card col-lg-6 col-12 mt-4" style="width: 18rem;">
                             <img class="card-img-top w-100 smartphone-icon mt-3" src="{{asset('image/smartphone.svg')}}" alt="Card image cap">
                             <div class="card-body text-center">
                               <h4 class="card-title">Product & Orders</h4>
@@ -18,7 +18,7 @@
                               <p class="card-text">7 days a week</p>
                             </div>
                         </div>
-                        <div class="card col-6 mt-4" style="width: 18rem;">
+                        <div class="card col-lg-6 col-12 mt-4" style="width: 18rem;">
                             <img class="card-img-top w-100 smartphone-icon mt-3" src="{{asset('image/chat.svg')}}" alt="Card image cap">
                             <div class="card-body text-center">
                               <h4 class="card-title">Product & Orders</h4>
@@ -29,7 +29,7 @@
                         </div>
                     </div>
                     <div class="card-deck mb-4">
-                        <div class="card col-6 mt-4" style="width: 18rem;">
+                        <div class="card col-lg-6 col-12 mt-4" style="width: 18rem;">
                             <img class="card-img-top w-100 smartphone-icon mt-3" src="{{asset('image/mail.svg')}}" alt="Card image cap">
                             <div class="card-body text-center">
                               <h4 class="card-title">Product & Orders</h4>
@@ -37,7 +37,7 @@
                               <p class="card-text-all">We'll reply within five business days</p>
                             </div>
                         </div>
-                        <div class="card col-6 mt-4" style="width: 18rem;">
+                        <div class="card col-lg-6 col-12 mt-4" style="width: 18rem;">
                             <img class="card-img-top w-100 smartphone-icon mt-3" src="{{asset('image/location.svg')}}" alt="Card image cap">
                             <div class="card-body text-center">
                               <h4 class="card-title">Store Location</h4>

@@ -19,7 +19,7 @@
                             <p>We provide a variety od shoe options with a good combination of design and product materials and consider the price and comfort of use that can compete in the market</p>
                         </div>
                     </div>
-                    <div class="row mt-4">
+                    <div class="row session-about-reverse">
                         <div class="col-lg-6 d-flex align-items-center ">
                             <p class="text-right">Presenting a wide selection of the best products with the right photos, accurate descriptions, and competitive prices. You Will not disappoint.</p>
                         </div>

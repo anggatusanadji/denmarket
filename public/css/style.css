@@ -288,7 +288,7 @@ background: #FF4A4A;
 }
 
 .product-card::after {
-  content: "SHOE";
+  content: "SHOES";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -444,21 +444,24 @@ background: #FF4A4A;
 /* LOCATION END */
 
 /*small devices*/
-@media (max-width: 768px) { 
-    
+@media (max-width: 687px) {     
     .reverse-column {
         flex-direction: row-reverse;
+    }
+    .session-about-reverse {
+      display: flex;
+      flex-direction: row-reverse;
     }
     .col, [class*='col-'] {
         -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
         max-width: 100%;	
     }
-	.col-3 {
-		-ms-flex-preferred-size: 25%;
-		flex-basis: 25%;
-		max-width: 25%;	
-	}
+    .col-3 {
+      -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+      max-width: 25%;	
+    }
     .hero-text{
         margin-top: 100px;
         text-align: center;
@@ -470,9 +473,6 @@ background: #FF4A4A;
     .elipse{
         display: none;
     }
-}
-
-@media (max-width: 768px) { 
     .hero-text div .welcome-hero{
         font-size: 20px;
         line-height: 22px;
@@ -520,6 +520,24 @@ background: #FF4A4A;
     .discount .button-buy{
         font-size: 13px;
     }
+    .product-card {
+      width: 280px;
+    }
+    .container-about-location{
+      margin: 0;
+      margin-top: -100px;
+    }
+    .container-about-location .card{
+      margin-top: 80px !important;
+      padding: 13px !important;
+    }
+}
+
+@media (max-width: 992px){
+  .container-about-location{
+    margin: 0;
+    margin-top: -100px;
+  }
 }
 
 /* footer */
@@ -655,11 +673,13 @@ background: #FF4A4A;
 .social-icons a.whatsapp:hover{
   background-color:#34D131
 }
+
 @media (max-width:767px){
   .social-icons li.title{
     display:block;
     margin-right:0;
     font-weight:600
   }
+ 
 }
 /* footer end */

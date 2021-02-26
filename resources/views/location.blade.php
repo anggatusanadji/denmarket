@@ -3,6 +3,7 @@
 @section('title' ,'Location')
 
 @section('container')
+<div class="container">
     <img src="{{asset('image/about-hero2.png')}}" alt="" class="mx-auto d-block border border-top-0">
     {{-- <div class="container d-flex justify-content-center align-items-center">
         <div class="row container-about-location">
@@ -20,4 +21,5 @@
             </div>
         </div>
     </div>
+</div>
 @endsection

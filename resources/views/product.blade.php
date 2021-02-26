@@ -22,10 +22,10 @@
         </div>
     </div>
     
-    <div class="product">
-        <div class="container">
+    <div class="container">
+        <div class="product">
             <div class="row">
-                <ul class="col-lg-6 offset-lg-3 d-flex justify-content-around ul-product">
+                <ul class="col-6 offset-lg-3 d-flex justify-content-between ul-product">
                     <li class="active">
                         <a href="">Football Shoes</a>
                         <div class="underline"></div>
@@ -42,7 +42,7 @@
             </div>
             <!-- row 1 -->
             <div class="row justify-content-center mt-4">
-                <div class="card-deck ">
+                <div class="card-deck">
                     <div class="card product-card">
                         <div class="imgBox">
                             <img src="{{ asset('image/product image/football/football2.png') }}" alt="" class="shoe">
