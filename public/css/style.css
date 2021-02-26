@@ -332,12 +332,11 @@ background: #FF4A4A;
   font-size: 18px;
   color: #262626;
   font-weight: 500;
-  text-transform: uppercase;
   letter-spacing: 1px;
 }
 
 .product-card .contentBox .price {
-  font-size: 24px;
+  font-size: 20px;
   color: #262626;
   font-weight: 700;
   letter-spacing: 1px;
@@ -411,19 +410,41 @@ background: #FF4A4A;
   color: #8B8BA5;
   line-height: 8px;
 }
+
+.contact-us .all-card{
+  margin-top: -1em;
+}
+.contact-us .card-deck img{
+  height: 100px;
+}
+.contact-us .card-text , .card-text-all{
+  line-height: 5px;
+  font-size: 14px;
+}
+.contact-us .card-title{
+  font-size: 18px;
+}
+.contact-us .card-text-all{
+  line-height: 18px;
+  margin-top: -7px;
+}
 /* CONTACT US END */
 
 /* ABOUT US START */
 .container {
   position: relative;
 }
-.container .container-about {
+.container .container-about-location {
   margin-top: -6em;
 }
 /* ABOUT US END */
 
+/* LOCATION START */
+
+/* LOCATION END */
+
 /*small devices*/
-@media (max-width: 576px) { 
+@media (max-width: 768px) { 
     
     .reverse-column {
         flex-direction: row-reverse;
@@ -451,7 +472,7 @@ background: #FF4A4A;
     }
 }
 
-@media (max-width: 1024px) { 
+@media (max-width: 768px) { 
     .hero-text div .welcome-hero{
         font-size: 20px;
         line-height: 22px;

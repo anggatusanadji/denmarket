@@ -16,39 +16,89 @@
     <body>
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand font-weight-bold" href="#"><span style=color:#FF4A4A>DenMarket</span> Store</a>
+            <a class="navbar-brand font-weight-bold" href="#"><span style=color:#FF4A4A>DenMarket</span> Sport</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse navbar-denmarket" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
+                    <li class="nav-item {{ Request::is('home') ? 'active' : '' }}">
+                        <a class="nav-link" href="{{url('/home')}}">Home</a>
                         <div class="underline-bar"></div>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Product</a>
+                    <li class="nav-item {{ Request::is('product', 'product/{id}') ? 'active' : '' }}">
+                        <a class="nav-link" href="{{url('/product')}}">Product</a>
                         <div class="underline-bar"></div>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                    <li class="nav-item {{ Request::is('about') ? 'active' : '' }}">
+                        <a class="nav-link" href="{{url('/about')}}">About</a>
                         <div class="underline-bar"></div>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                    <li class="nav-item {{ Request::is('contact') ? 'active' : '' }}">
+                        <a class="nav-link" href="{{url('/contact')}}">Contact</a>
                         <div class="underline-bar"></div>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Location</a>
+                    <li class="nav-item {{ Request::is('location') ? 'active' : '' }}">
+                        <a class="nav-link" href="{{url('/location')}}">Location</a>
                         <div class="underline-bar"></div>
                     </li>
                 </ul>
             </div>
-        </nav>
-        
-        @yield('container')
-
+        </nav>        
     </div>
+    @yield('container')
+
+    <!-- start footer -->
+    <div class="container footer-cont">
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <h2>DenMarket <span color="#FF4A4A">Sport</span></h2>
+                    <p class="text-justify">A great fit for powerfull players</p>
+                </div>
+
+                <div class="col-xs-6 col-md-3">
+                    <h6>Explore</h6>
+                    <ul class="footer-links">
+                        <li><a href="{{url('/home')}}">Home</a></li>
+                        <li><a href="{{url('/product')}}">Product</a></li>
+                        <li><a href="{{url('/about')}}">About</a></li>
+                        <li><a href="{{url('/location')}}">Location</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-xs-6 col-md-3">
+                    <h6>Contact Us</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">Denpasar - Bali</a></li>
+                        <li><a href="#">denmarket@gmail.com</a></li>
+                        <li><a href="#">083-114-803-923</a></li>
+                    </ul>
+                </div>
+                </div>
+                <hr>
+            </div>
+            <div class="container">
+                <div class="row">
+                <div class="col-md-8 col-sm-6 col-xs-12">
+                    <p class="copyright-text">Copyright &copy; 2021 All Rights Reserved by DenMarket Sport.
+                    </p>
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <ul class="social-icons">
+                    <li><a class="facebook" href="#"><i class="fab fa-facebook"></i></a></li>
+                    <li><a class="twitter" href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a class="instagram" href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a class="whatsapp" href="#"><i class="fab fa-whatsapp"></i></a></li>   
+                    </ul>
+                </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- end footer -->
 
 
     <!-- Optional JavaScript -->

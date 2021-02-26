@@ -20,3 +20,5 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index']);
 Route::get('/product', [App\Http\Controllers\ProductController::class, 'index']);
 Route::get('/about', [App\Http\Controllers\AboutController::class, 'index']);
 Route::get('/contact', [App\Http\Controllers\ContactController::class, 'index']);
+Route::get('/location', [App\Http\Controllers\LocationController::class, 'index']);
+Route::get('/product/detail-product', [App\Http\Controllers\DetailProductController::class, 'index']);
