@@ -105,6 +105,15 @@
     line-height: 10px; 
 }
 
+@media (max-width: 1200px){
+  .discount .title-discount{
+    line-height: 25px;
+  }
+  .discount .text-discount{
+    line-height: 15px;
+  }
+}
+
 /* Testimonials */
 a,
 a:hover,
@@ -425,9 +434,17 @@ background: #FF4A4A;
   font-size: 18px;
 }
 .contact-us .card-text-all{
-  line-height: 18px;
+  line-height: 19px;
   margin-top: -7px;
 }
+
+@media (max-width: 687px){
+  .contact-us .container-contact{
+    margin-top: 30px;
+  }
+}
+
+
 /* CONTACT US END */
 
 /* ABOUT US START */
@@ -439,18 +456,24 @@ background: #FF4A4A;
 }
 /* ABOUT US END */
 
-/* LOCATION START */
+/* DETAIL PRODUCT START */
 
-/* LOCATION END */
+/* DETAIL PRODUCT END */
 
 /*small devices*/
 @media (max-width: 687px) {     
     .reverse-column {
         flex-direction: row-reverse;
     }
-    .session-about-reverse {
-      display: flex;
-      flex-direction: row-reverse;
+    .container-about-location .session-about-reverse {
+      flex-direction: column-reverse;
+    }
+    .container-about-location .session-about-reverse p{
+      text-align: left !important;
+    }
+    .container-about-location .session-about-reverse img{
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1);
     }
     .col, [class*='col-'] {
         -ms-flex-preferred-size: 100%;
@@ -496,9 +519,6 @@ background: #FF4A4A;
     .hero-text .explore i{
         font-size: 10px;
     }
-    .elipse{
-        display: none;
-    }
     .title-quality{
         font-size:30px; 
         line-height: 35px;
@@ -508,6 +528,10 @@ background: #FF4A4A;
     }   
     .trending .row .trending-title{
         font-size: 28px;
+    }
+    .discount .col-discount{
+      padding-bottom: 15px;
+      text-align: center;
     }
     .discount .title-discount{
         font-size: 20px;
@@ -537,6 +561,15 @@ background: #FF4A4A;
   .container-about-location{
     margin: 0;
     margin-top: -100px;
+  }
+  .contact-us .card-text{
+    line-height: 17px;
+  }
+  .elipse{
+    display: none;
+  }
+  .product ul li{
+    font-size: 14px;
   }
 }
 

@@ -26,7 +26,7 @@
                         <a class="nav-link" href="{{url('/home')}}">Home</a>
                         <div class="underline-bar"></div>
                     </li>
-                    <li class="nav-item {{ Request::is('product', 'product/{id}') ? 'active' : '' }}">
+                    <li class="nav-item {{ Request::is('product', 'product/detail-product') ? 'active' : '' }}">
                         <a class="nav-link" href="{{url('/product')}}">Product</a>
                         <div class="underline-bar"></div>
                     </li>

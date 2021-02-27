@@ -3,10 +3,10 @@
 
 @section('container')
     <div class="container">
-        <div class="row mt-4">
-            <div class="col-lg-6 col-12 border ">    
-                <div class="text-center">
-                    <img src="{{asset('image/product image/football/football2.png')}}" alt=""
+        <div class="row mt-4 container-detail">
+            <div class="col-lg-6 col-12 border d-flex justify-content-center align-items-center">    
+                <div>
+                    <img src="{{asset('image/product image/football/football1.png')}}" alt=""
                     class="center-block d-block mx-auto">   
                 </div>
             </div>

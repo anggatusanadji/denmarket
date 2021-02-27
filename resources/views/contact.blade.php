@@ -1,6 +1,6 @@
 @extends('layout.header')
 
-@section('title' ,'Location')
+@section('title' ,'Contact')
 
 @section('container')
 <div class="container">
@@ -47,7 +47,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 container-contact">
                 <p class="font-weight-normal contact-title"><span style="color:#FF4A4A">Contact</span> Us</p>
                 <p class="font-weight-normal contact-text">Contact us if you need help</p>
                 <div class="row info-contact">
