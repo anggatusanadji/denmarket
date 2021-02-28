@@ -13,12 +13,28 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Auth::routes();
+Route::get('/dashboard', 'HomeController@index')->name('home');
+
+Route::get('logout', 'Auth\LoginController@logout', function () {
+    return abort(404);
+});
+
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index']);
-Route::get('/product', [App\Http\Controllers\ProductController::class, 'index']);
-Route::get('/about', [App\Http\Controllers\AboutController::class, 'index']);
-Route::get('/contact', [App\Http\Controllers\ContactController::class, 'index']);
-Route::get('/location', [App\Http\Controllers\LocationController::class, 'index']);
-Route::get('/product/detail-product', [App\Http\Controllers\DetailProductController::class, 'index']);
+
+// Route::prefix('dashboard')->group(function () {
+//     Route::get('', 'DashboardController@index')->name('home');
+// });
+
+// route view user
+Route::get('home', 'HomeProductController@index');
+Route::prefix('product')->group(function () {
+    Route::get('', 'ProductController@index');
+    Route::get('detail-product', 'DetailProductController@index');
+});
+Route::get('about', 'AboutController@index');
+Route::get('contact', 'ContactController@index');
+Route::get('location', 'LocationController@index');
+

@@ -2562,8 +2562,8 @@ fieldset:disabled a.btn {
 
 .btn-danger {
   color: #fff;
-  background-color: #e74a3b;
-  border-color: #e74a3b;
+  background-color: #FF4A4A;
+  border-color: #cc2121;
 }
 
 .btn-danger:hover {
@@ -9612,7 +9612,7 @@ a.text-warning:hover, a.text-warning:focus {
 }
 
 .text-danger {
-  color: #e74a3b !important;
+  color: #FF4A4A !important;
 }
 
 a.text-danger:hover, a.text-danger:focus {
@@ -9874,8 +9874,8 @@ a:focus {
 }
 
 .bg-gradient-primary {
-  background-color: #4e73df;
-  background-image: linear-gradient(180deg, #4e73df 10%, #224abe 100%);
+  background-color: #FF4A4A;
+  background-image: linear-gradient(180deg, #FF4A4A 10%, #cc2121 100%);
   background-size: cover;
 }
 
@@ -10803,13 +10803,13 @@ a:focus {
 }
 
 .bg-login-image {
-  background: url("https://source.unsplash.com/K4mSJ7kc0As/600x800");
+  background: url("../image/bg-login.png");
   background-position: center;
   background-size: cover;
 }
 
 .bg-register-image {
-  background: url("https://source.unsplash.com/Mv9hjnEUHR4/600x800");
+  background: url("../image/bg-login.png");
   background-position: center;
   background-size: cover;
 }
