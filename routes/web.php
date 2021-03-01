@@ -16,14 +16,18 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 Route::prefix('dashboard')->group(function () {
     Route::get('', 'HomeController@index')->name('home');
+    Route::resource('admin', 'AdminController');
+    Route::resource('kategori', 'KategoriController');
 });
 Route::get('logout', 'Auth\LoginController@logout', function () {
     return abort(404);
 });
 
+
 Route::get('/', function () {
     return view('welcome');
 });
+
 
 // route view user
 Route::get('home', 'HomeProductViewController@index');
@@ -32,6 +36,6 @@ Route::prefix('product')->group(function () {
     Route::get('detail-product', 'DetailProductViewController@index');
 });
 Route::view('about', 'about');
+Route::view('location', 'location');
 Route::get('contact', 'ContactViewController@index');
-Route::get('location', 'LocationViewController@index');
 

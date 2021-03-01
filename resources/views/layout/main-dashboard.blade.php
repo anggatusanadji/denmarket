@@ -76,12 +76,12 @@ rel="stylesheet">
         </div>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="{{ url('kategori') }}">
+        <a class="nav-link" href="{{ url('dashboard/kategori') }}">
         <i class="fas fa-fw fa-table"></i>
         <span>Kategori</span></a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="{{ url('admin') }}">
+        <a class="nav-link" href="{{ url('dashboard/admin') }}">
         <i class="fas fa-fw fa-table"></i>
         <span>Admin</span></a>
     </li>
@@ -155,9 +155,7 @@ rel="stylesheet">
                     @csrf
                 </form>
                 </div>
-            </div>
-        </div>
-    
+            </div> 
         </ul>
 
         </nav>

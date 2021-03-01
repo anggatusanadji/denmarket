@@ -7,8 +7,8 @@
   <div class="container-fluid">
     <!-- Content Row -->
     
-    <!-- ini tambah data          -->
-    <!-- <a href="" class="btn btn-primary my-3"><i class="fas fa-plus-square"></i> Tambah Data Kategori</a>  -->
+    <!-- ini tambah data -->         
+    <a href="{{ url('dashboard/kategori/create') }}" class="btn btn-danger my-3"><i class="fas fa-plus-square"></i> Tambah Data Kategori</a> 
 
     <!-- Flash -->
     @if(session()->get('status'))
@@ -22,7 +22,7 @@
 
       <div class="card shadow mb-4">
         <div class="card-header py-3">
-          <h6 class="m-0 font-weight-bold text-danger">Data Admin</h6>
+          <h6 class="m-0 font-weight-bold text-danger">Data Kategori Sepatu</h6>
         </div>
           <div class="card-body">
             <div class="table-responsive">
@@ -31,25 +31,36 @@
                   <tr>                        
                       <th scope="col">#</th>
                       <th scope="col">Nama</th>
-                      <th scope="col">Username</th>
-                      <th scope="col">Email</th>
+                      <th scope="col">Aksi</th>
                   </tr>
                 </thead>
               <tbody>
-                  @foreach($admin as $adm)
+                  @foreach($kategori as $ktg)
                   <tr>
                       <th scope="row">{{ $loop->iteration }}</th>
-                      <td>{{ $adm->name }}</td>
-                      <td>{{ $adm->username }}</td>
-                      <td>{{ $adm->email }}</td>
+                      <td>{{ $ktg->nama_kategori }}</td>
+                      <td class="text-center">
+                        <a href="{{ url('dashboard/kategori/'.$ktg->id.'/edit') }}" type="button" class="btn btn-primary">
+                          <i class="fa fa-edit"></i>
+                        </a>
+                        <form action="{{ url('dashboard/kategori/'.$ktg->id) }}" method="post" class="d-inline" onsubmit="return confirm('Anda Yakin Ingin Menghapus Kategori {{$ktg->nama_kategori}}?')">
+                          @method('delete')
+                          @csrf
+                          <button type="submit" class="btn btn-danger">
+                            <i class="fa fa-trash"></i>
+                          </button>
+                        </form>
+                      </td>
                   </tr>
                   @endforeach
               </tbody>
               </table>
             </div>
           </div>
-      </div>
+      </div> 
   </div>
 </div>
+  
 <!-- End of Main Content -->
 @endsection
+

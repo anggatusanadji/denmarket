@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use App\User;
+use App\Kategori;
 
-class AdminController extends Controller
+class KategoriController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +16,8 @@ class AdminController extends Controller
     public function index()
     {
         // $kategori = DB::table('films')->get();
-        $admin = User::all();
-        return view('admin.index', ['admin' => $admin]);
+        $kategori = Kategori::all();
+        return view('kategori.index', ['kategori' => $kategori]);
     }
 
     /**
@@ -27,7 +27,7 @@ class AdminController extends Controller
      */
     public function create()
     {
-        
+        return view('kategori.create');
     }
 
     /**
@@ -38,6 +38,12 @@ class AdminController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'nama_kategori' => 'required'
+        ]);
+
+        Kategori::create($request->all());
+        return redirect('/dashboard/kategori')->with('status', 'Data Kategori Berhasil Ditambahkan.');
         
     }
 
@@ -55,34 +61,48 @@ class AdminController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\User $user
+     * @param  \App\Kategori  $kategori
      * @return \Illuminate\Http\Response
      */
     public function edit(Kategori $kategori)
     {
-        
+        return view('kategori.edit', compact('kategori'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\User  $user
+     * @param  \App\Kategori  $kategori
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Kategori $kategori)
     {
-        
+        $request->validate([
+            'nama_kategori' => 'required' 
+        ]);
+
+        Kategori::where('id', $kategori->id)
+            ->update([
+                'nama_kategori' => $request->nama_kategori
+            ]);
+        return redirect('/dashboard/kategori')->with('status', 'Data Kategori Berhasil Diubah!');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\User $kategori
+     * @param  \App\Kategori  $kategori
      * @return \Illuminate\Http\Response
      */
     public function destroy(Kategori $kategori)
     {
-        
+        // Menghapus sementara (Soft Delete)
+        // Kategori::destroy($kategori->id);
+
+        // Menghapus permanen
+        $kategori->forceDelete();
+
+        return redirect('/dashboard/kategori')->with('status', 'Data Kategori Berhasil Dihapus!');
     }
 }
