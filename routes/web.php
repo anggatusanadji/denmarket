@@ -14,8 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Auth::routes();
-Route::get('/dashboard', 'HomeController@index')->name('home');
-
+Route::prefix('dashboard')->group(function () {
+    Route::get('', 'HomeController@index')->name('home');
+});
 Route::get('logout', 'Auth\LoginController@logout', function () {
     return abort(404);
 });
@@ -24,17 +25,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Route::prefix('dashboard')->group(function () {
-//     Route::get('', 'DashboardController@index')->name('home');
-// });
-
 // route view user
-Route::get('home', 'HomeProductController@index');
+Route::get('home', 'HomeProductViewController@index');
 Route::prefix('product')->group(function () {
-    Route::get('', 'ProductController@index');
-    Route::get('detail-product', 'DetailProductController@index');
+    Route::get('', 'ProductViewController@index');
+    Route::get('detail-product', 'DetailProductViewController@index');
 });
-Route::get('about', 'AboutController@index');
-Route::get('contact', 'ContactController@index');
-Route::get('location', 'LocationController@index');
+Route::view('about', 'about');
+Route::get('contact', 'ContactViewController@index');
+Route::get('location', 'LocationViewController@index');
 

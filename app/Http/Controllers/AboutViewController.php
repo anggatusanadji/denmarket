@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class DetailProductController extends Controller{
+class AboutViewController extends Controller{
     public function index(){
-        return view('detail-product');
+        return view('about');
     }
 }

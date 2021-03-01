@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ProductController extends Controller{
+class ContactViewController extends Controller{
     public function index(){
-        return view('product');
+        return view('contact');
     }
 }

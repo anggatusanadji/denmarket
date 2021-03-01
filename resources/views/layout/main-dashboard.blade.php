@@ -30,7 +30,7 @@ rel="stylesheet">
 <div id="wrapper">
 
 <!-- Sidebar -->
-<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+<ul class="navbar-nav bg-gradient-danger sidebar sidebar-dark accordion" id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
     <div class="sidebar-brand d-flex align-items-center justify-content-center">
@@ -76,17 +76,12 @@ rel="stylesheet">
         </div>
     </li>
     <li class="nav-item">
-    <a class="nav-link" href="{{ url('kategori') }}">
+        <a class="nav-link" href="{{ url('kategori') }}">
         <i class="fas fa-fw fa-table"></i>
         <span>Kategori</span></a>
     </li>
     <li class="nav-item">
-    <a class="nav-link" href="{{ url('penerbit') }}">
-        <i class="fas fa-fw fa-table"></i>
-        <span>Penerbit</span></a>
-    </li>
-    <li class="nav-item">
-    <a class="nav-link" href="{{ url('admin') }}">
+        <a class="nav-link" href="{{ url('admin') }}">
         <i class="fas fa-fw fa-table"></i>
         <span>Admin</span></a>
     </li>
