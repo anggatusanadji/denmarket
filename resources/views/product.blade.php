@@ -45,7 +45,7 @@
                 <div class="card-deck">
                     <div class="card product-card" data-aos="flip-right" data-aos-duration="1000">
                         <div class="imgBox">
-                            <img src="{{ asset('image/product image/football/football1.png') }}" alt="" class="shoe">
+                            <img src="{{ asset('image/product/football1.png') }}" alt="" class="shoe">
                         </div>
                         <div class="contentBox">
                             <h3>Football Shoes</h3>
@@ -55,7 +55,7 @@
                     </div>
                     <div class="card product-card" data-aos="flip-right" data-aos-duration="1000">
                         <div class="imgBox">
-                            <img src="{{ asset('image/product image/football/football2.png') }}" alt="" class="shoe">
+                            <img src="{{ asset('image/product/football2.png') }}" alt="" class="shoe">
                         </div>
                         <div class="contentBox">
                             <h3>Football Shoes</h3>
@@ -65,7 +65,7 @@
                     </div>
                     <div class="card product-card" data-aos="flip-right" data-aos-duration="1000">
                         <div class="imgBox">
-                            <img src="{{ asset('image/product image/football/football3.png') }}" alt="" class="shoe">
+                            <img src="{{ asset('image/product/football3.png') }}" alt="" class="shoe">
                         </div>
                         <div class="contentBox">
                             <h3>Football Shoes</h3>
@@ -75,7 +75,7 @@
                     </div>
                     <div class="card product-card" data-aos="flip-right" data-aos-duration="1500">
                         <div class="imgBox">
-                            <img src="{{ asset('image/product image/football/football4.png') }}" alt="" class="shoe">
+                            <img src="{{ asset('image/product/football4.png') }}" alt="" class="shoe">
                         </div>
                         <div class="contentBox">
                             <h3>Football Shoes</h3>
@@ -90,7 +90,7 @@
                 <div class="card-deck">
                     <div class="card product-card" data-aos="flip-right" data-aos-duration="1000">
                         <div class="imgBox">
-                            <img src="{{ asset('image/product image/football/football5.png') }}" alt="" class="shoe">
+                            <img src="{{ asset('image/product/football5.png') }}" alt="" class="shoe">
                         </div>
                         <div class="contentBox">
                             <h3>Football Shoes</h3>
@@ -100,7 +100,7 @@
                     </div>
                     <div class="card product-card" data-aos="flip-right" data-aos-duration="1000">
                         <div class="imgBox">
-                            <img src="{{ asset('image/product image/football/football6.png') }}" alt="" class="shoe">
+                            <img src="{{ asset('image/product/football6.png') }}" alt="" class="shoe">
                         </div>
                         <div class="contentBox">
                             <h3>Football Shoes</h3>
@@ -110,7 +110,7 @@
                     </div>
                     <div class="card product-card" data-aos="flip-right" data-aos-duration="1000">
                         <div class="imgBox">
-                            <img src="{{ asset('image/product image/football/football7.png') }}" alt="" class="shoe">
+                            <img src="{{ asset('image/product/football7.png') }}" alt="" class="shoe">
                         </div>
                         <div class="contentBox">
                             <h3>Football Shoes</h3>
@@ -120,7 +120,7 @@
                     </div>
                     <div class="card product-card" data-aos="flip-right" data-aos-duration="1000">
                         <div class="imgBox">
-                            <img src="{{ asset('image/product image/football/football8.png') }}" alt="" class="shoe">
+                            <img src="{{ asset('image/product/football8.png') }}" alt="" class="shoe">
                         </div>
                         <div class="contentBox">
                             <h3>Football Shoes</h3>
@@ -135,7 +135,7 @@
                 <div class="card-deck">
                     <div class="card product-card" data-aos="flip-right" data-aos-duration="1000">
                         <div class="imgBox">
-                            <img src="{{ asset('image/product image/football/football9.png') }}" alt="" class="shoe">
+                            <img src="{{ asset('image/product/football9.png') }}" alt="" class="shoe">
                         </div>
                         <div class="contentBox">
                             <h3>Football Shoes</h3>
@@ -145,7 +145,7 @@
                     </div>
                     <div class="card product-card" data-aos="flip-right" data-aos-duration="1000">
                         <div class="imgBox">
-                            <img src="{{ asset('image/product image/football/football10.png') }}" alt="" class="shoe">
+                            <img src="{{ asset('image/product/football10.png') }}" alt="" class="shoe">
                         </div>
                         <div class="contentBox">
                             <h3>Football Shoes</h3>
@@ -155,7 +155,7 @@
                     </div>
                     <div class="card product-card" data-aos="flip-right" data-aos-duration="1000">
                         <div class="imgBox">
-                            <img src="{{ asset('image/product image/football/football11.png') }}" alt="" class="shoe">
+                            <img src="{{ asset('image/product/football11.png') }}" alt="" class="shoe">
                         </div>
                         <div class="contentBox">
                             <h3>Football Shoes</h3>
@@ -165,7 +165,7 @@
                     </div>
                     <div class="card product-card" data-aos="flip-right" data-aos-duration="1000">
                         <div class="imgBox">
-                            <img src="{{ asset('image/product image/football/football12.png') }}" alt="" class="shoe">
+                            <img src="{{ asset('image/product/football12.png') }}" alt="" class="shoe">
                         </div>
                         <div class="contentBox">
                             <h3>Football Shoes</h3>

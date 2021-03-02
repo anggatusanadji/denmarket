@@ -47,16 +47,16 @@
                 <div class="row justify-content-center">
                     <div class="card-deck">
                         <div class="card col-lg-6 col-12" data-aos="fade-right" data-aos-duration="1000">
-                            <img src="{{ asset('image/product image/futsal/futsal1.png') }}" alt="" class="w-100 h-100">
+                            <img src="{{ asset('image/product/futsal1.png') }}" alt="" class="w-100 h-100">
                         </div>
                         <div class="card col-lg-6 col-12" data-aos="fade-up-right" data-aos-duration="1000">
-                            <img src="{{ asset('image/product image/futsal/futsal2.png') }}" alt="" class="w-100 h-100">
+                            <img src="{{ asset('image/product/futsal2.png') }}" alt="" class="w-100 h-100">
                         </div>
                         <div class="card col-lg-6 col-12" data-aos="fade-up-left" data-aos-duration="1000">
-                            <img src="{{ asset('image/product image/futsal/futsal3.png') }}" alt="" class="w-100 h-100">
+                            <img src="{{ asset('image/product/futsal3.png') }}" alt="" class="w-100 h-100">
                         </div>
                         <div class="card col-lg-6 col-12" data-aos="fade-left" data-aos-duration="1000">
-                            <img src="{{ asset('image/product image/futsal/futsal4.png') }}" alt="" class="w-100 h-100">
+                            <img src="{{ asset('image/product/futsal4.png') }}" alt="" class="w-100 h-100">
                         </div>
                     </div>
                 </div>

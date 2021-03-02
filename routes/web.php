@@ -25,6 +25,7 @@ Route::prefix('dashboard')->middleware(['auth'])->group(function () {
     Route::get('', 'HomeController@index')->name('home');
     Route::resource('admin', 'AdminController');
     Route::resource('kategori', 'KategoriController');
+    Route::resource('produk', 'ProdukController');
     Route::get('logout', 'LoginController@logout')->name('logout');
     
 });

@@ -48,114 +48,102 @@ class ProdukController extends Controller
             'kategori_id' => 'required', 
             'size_produk' => 'required', 
             'harga_produk' => 'required',
-            'tipe_id' => 'required'    
+            'tipe_id' => 'required',
+            'gambar_produk' => 'required|image|mimes:jpg,jpeg,png|max:2048'
         ]);
 
-        $img = $request->file('cover_produk');
-        $cover_buku = $img->getClientOriginalName();
-        $upDir = 'image/buku';
-        $img->move($upDir, $cover_buku);
+        $img = $request->file('gambar_produk');
+        $gambar_produk = $img->getClientOriginalName();
+        $upDir = 'image/product';
+        $img->move($upDir, $gambar_produk);
 
-        Buku::create([
+        Produk::create([
+            'nama_produk' => $request->nama_produk,
+            'deskripsi_produk' => $request->deskripsi_produk,
             'kategori_id' => $request->kategori_id,
-            'judul_buku' => $request->judul_buku,
-            'deskripsi_buku' => $request->deskripsi_buku,
-            'penerbit_id' => $request->penerbit_id,
-            'penulis_buku' => $request->penulis_buku,
-            'jumlah_halaman' => $request->jumlah_halaman,
-            'tahun_terbit' => $request->tahun_terbit,
-            'harga_buku' => $request->harga_buku,
-            'cover_buku' => $cover_buku,
+            'size_produk' => $request->size_produk,
+            'harga_produk' => $request->harga_produk,
             'tipe_id' => $request->tipe_id,
-            'status' => $request->status
+            'gambar_produk' => $request->gambar_produk
         ]);
 
-        // Buku::create($request->all());
-        return redirect('/buku')->with('status', 'Data Buku Berhasil Ditambahkan.');
+        // Produk::create($request->all());
+        return redirect('/dashboard/produk')->with('status', 'Data Produk Berhasil Ditambahkan.');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Buku  $buku
+     * @param  \App\Produk  $produk
      * @return \Illuminate\Http\Response
      */
-    public function show(Buku $buku)
+    public function show(Produk $produk)
     {
-        return view('buku.show', compact('buku'));
+        return view('produk.show', compact('produk'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Buku  $buku
+     * @param  \App\Produk  $produk
      * @return \Illuminate\Http\Response
      */
-    public function edit(Buku $buku)
+    public function edit(Produk $produk)
     {
         $kategori = Kategori::all();
-        $penerbit = Penerbit::all();
         $tipe = Tipe::all();
 
-        return view('buku.edit', compact('kategori','penerbit','tipe','buku'));
+        return view('produk.edit', compact('kategori','tipe','produk'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Buku  $buku
+     * @param  \App\Produk  $produk
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Buku $buku)
+    public function update(Request $request, Produk $produk)
     {
         $request->validate([
+            'nama_produk' => 'required',
+            'deskripsi_produk' => 'required', 
             'kategori_id' => 'required', 
-            'judul_buku' => 'required',
-            'deskripsi_buku' => 'required',
-            'penerbit_id' => 'required',
-            'penulis_buku' => 'required',
-            'jumlah_halaman' =>'required',
-            'tahun_terbit' => 'required',
-            'harga_buku' => 'required',
-            'cover_buku' => 'required',
-            'tipe_id' => 'required',    
-            'status' => 'required',   
+            'size_produk' => 'required', 
+            'harga_produk' => 'required',
+            'tipe_id' => 'required',
+            'gambar_produk' => 'required|image|mimes:jpg,jpeg,png|max:2048'   
         ]);
 
-        Buku::where('id', $buku->id)
+        Produk::where('id', $produk->id)
             ->update([
-                'kategori_id' => $request->kategori_id,
-                'judul_buku' => $request->judul_buku,
-                'deskripsi_buku' => $request->deskripsi_buku,
-                'penerbit_id' => $request->penerbit_id,
-                'penulis_buku' => $request->penulis_buku,
-                'jumlah_halaman' => $request->jumlah_halaman,
-                'tahun_terbit' => $request->tahun_terbit,
-                'harga_buku' => $request->harga_buku,
-                'cover_buku' => $request->cover_buku,
-                'tipe_id' => $request->tipe_id,
-                'status' => $request->status,
+            'nama_produk' => $request->nama_produk,
+            'deskripsi_produk' => $request->deskripsi_produk,
+            'kategori_id' => $request->kategori_id,
+            'size_produk' => $request->size_produk,
+            'harga_produk' => $request->harga_produk,
+            'tipe_id' => $request->tipe_id,
+            'gambar_produk' => $request->gambar_produk
             ]);
         
-        return redirect('/buku')->with('status', 'Data Buku Berhasil Diubah!');
+        return redirect('/dashboard/produk')->with('status', 'Data Produk Berhasil Diubah!');
     }
     
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Buku  $buku
+     * @param  \App\Produk  $produk
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Buku $buku)
+    public function destroy(Produk $produk)
     {
         // Menghapus sementara (Soft Delete)
         // Kategori::destroy($kategori->id);
 
         // Menghapus permanen
-        $buku->forceDelete();
+        $produk->forceDelete();
 
-        return redirect('/buku')->with('status', 'Data Buku Berhasil Dihapus!');
+        return redirect('/dashboard/produk')->with('status', 'Data Buku Berhasil Dihapus!');
     }
 }

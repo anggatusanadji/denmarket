@@ -6,7 +6,7 @@
         <div class="row mt-4 container-detail">
             <div class="col-lg-6 col-12 border d-flex justify-content-center align-items-center">    
                 <div>
-                    <img src="{{asset('image/product image/football/football1.png')}}" alt=""
+                    <img src="{{asset('image/product/football1.png')}}" alt=""
                     class="center-block d-block mx-auto">   
                 </div>
             </div>
