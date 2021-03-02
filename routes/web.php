@@ -13,16 +13,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Auth::routes();
-Route::prefix('dashboard')->group(function () {
+Route::get('/login', 'LoginController@login')->name('login-form');
+Route::post('/authenticate', 'LoginController@authenticate')->name('login');
+
+Route::middleware(['auth'])->group(function () {
+    
+});
+
+
+Route::prefix('dashboard')->middleware(['auth'])->group(function () {
     Route::get('', 'HomeController@index')->name('home');
     Route::resource('admin', 'AdminController');
     Route::resource('kategori', 'KategoriController');
+    Route::get('logout', 'LoginController@logout')->name('logout');
+    
 });
-Route::get('logout', 'Auth\LoginController@logout', function () {
-    return abort(404);
-});
-
 
 Route::get('/', function () {
     return view('welcome');

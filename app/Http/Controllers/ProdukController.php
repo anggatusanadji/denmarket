@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Kategori;
+use App\Tipe;
 use App\Produk;
 
 class ProdukController extends Controller

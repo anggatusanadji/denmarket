@@ -40,7 +40,7 @@
                     <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
                   </div>
                   <div class="card-body">
-                    <form method="POST" action="{{ url('login') }}">
+                    <form method="POST" action="{{ route('login') }}">
                     @csrf
                     
                     <div class="form-group">
