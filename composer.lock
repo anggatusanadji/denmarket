@@ -963,16 +963,16 @@
         },
         {
             "name": "laravel/tinker",
-            "version": "v2.6.0",
+            "version": "v2.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/tinker.git",
-                "reference": "daae1c43f1300fe88c05d83db6f3d8f76677ad88"
+                "reference": "04ad32c1a3328081097a181875733fa51f402083"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/tinker/zipball/daae1c43f1300fe88c05d83db6f3d8f76677ad88",
-                "reference": "daae1c43f1300fe88c05d83db6f3d8f76677ad88",
+                "url": "https://api.github.com/repos/laravel/tinker/zipball/04ad32c1a3328081097a181875733fa51f402083",
+                "reference": "04ad32c1a3328081097a181875733fa51f402083",
                 "shasum": ""
             },
             "require": {
@@ -1025,9 +1025,9 @@
             ],
             "support": {
                 "issues": "https://github.com/laravel/tinker/issues",
-                "source": "https://github.com/laravel/tinker/tree/v2.6.0"
+                "source": "https://github.com/laravel/tinker/tree/v2.6.1"
             },
-            "time": "2021-01-26T20:35:18+00:00"
+            "time": "2021-03-02T16:53:12+00:00"
         },
         {
             "name": "league/commonmark",
@@ -4996,26 +4996,27 @@
         },
         {
             "name": "fzaninotto/faker",
-            "version": "v1.9.2",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fzaninotto/Faker.git",
-                "reference": "848d8125239d7dbf8ab25cb7f054f1a630e68c2e"
+                "reference": "5ffe7db6c80f441f150fc88008d64e64af66634b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/848d8125239d7dbf8ab25cb7f054f1a630e68c2e",
-                "reference": "848d8125239d7dbf8ab25cb7f054f1a630e68c2e",
+                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/5ffe7db6c80f441f150fc88008d64e64af66634b",
+                "reference": "5ffe7db6c80f441f150fc88008d64e64af66634b",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.3.3 || ^7.0"
+                "php": "^5.3.3 || ^7.0 || ^8.0"
             },
             "require-dev": {
                 "ext-intl": "*",
                 "phpunit/phpunit": "^4.8.35 || ^5.7",
                 "squizlabs/php_codesniffer": "^2.9.2"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -5044,10 +5045,10 @@
             ],
             "support": {
                 "issues": "https://github.com/fzaninotto/Faker/issues",
-                "source": "https://github.com/fzaninotto/Faker/tree/v1.9.2"
+                "source": "https://github.com/fzaninotto/Faker/tree/master"
             },
             "abandoned": true,
-            "time": "2020-12-11T09:56:16+00:00"
+            "time": "2020-12-11T09:59:14+00:00"
         },
         {
             "name": "hamcrest/hamcrest-php",

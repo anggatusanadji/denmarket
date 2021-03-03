@@ -64,7 +64,7 @@ class ProdukController extends Controller
             'size_produk' => $request->size_produk,
             'harga_produk' => $request->harga_produk,
             'tipe_id' => $request->tipe_id,
-            'gambar_produk' => $request->gambar_produk
+            'gambar_produk' => $gambar_produk
         ]);
 
         // Produk::create($request->all());
