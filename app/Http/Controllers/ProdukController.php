@@ -58,19 +58,19 @@ class ProdukController extends Controller
             'gambar_produk' => 'required|image|mimes:jpg,jpeg,png|max:2048'
         ]);
 
-        $img = $request->file('gambar_produk');
-        $gambar_produk = time(). "." .$img->getClientOriginalExtension();
-        $upDir = 'image/product';
-        $img->move($upDir, $gambar_produk);
+        // $img = $request->file('gambar_produk');
+        // $gambar_produk = time(). "." .$img->getClientOriginalExtension();
+        // $upDir = 'image/product';
+        // $img->move($upDir, $gambar_produk);
 
-        Produk::create([
+        $produk = Produk::create([
             'nama_produk' => $request->nama_produk,
             'deskripsi_produk' => $request->deskripsi_produk,
             'kategori_id' => $request->kategori_id,
             'size_produk' => $request->size_produk,
             'harga_produk' => $request->harga_produk,
             'tipe_id' => $request->tipe_id,
-            'gambar_produk' => $gambar_produk
+            'gambar_produk' => request('gambar_produk') ? request()->file('gambar_produk')->store('public/image/product') : null,
         ]);
 
         // Produk::create($request->all());
@@ -121,27 +121,37 @@ class ProdukController extends Controller
             'gambar_produk' => 'required|image|mimes:jpg,jpeg,png|max:2048'   
         ]);
         
-        if ($request->hasfile('gambar_produk')){
-            $file = $request->file('gambar_produk');
-            $extension = $file->getClientOriginalExtension();
-            $filename = time().'.'.$extension;
-            $file->move(public_path().'image/product',$filename);
-            $produk->gambar_produk=$filename;
-        } else {
-            return $request;
-            $produk->gambar_produk='';
-        }
 
-        Produk::where('id', $produk->id)
-            ->update([
+        // Produk::where('id', $produk->id)
+        //     ->update([
+        //     'nama_produk' => $request->nama_produk,
+        //     'deskripsi_produk' => $request->deskripsi_produk,
+        //     'kategori_id' => $request->kategori_id,
+        //     'size_produk' => $request->size_produk,
+        //     'harga_produk' => $request->harga_produk,
+        //     'tipe_id' => $request->tipe_id
+        //     ]);
+
+
+            if (request('gambar_produk')) {
+                Storage::delete($produk->gambar_produk);
+                $gambar_produk = request()->file('gambar_produk')->store('image/product');
+            }elseif($produk->gambar_produk){
+                $gambar_produk = $produk->gambar_produk;
+            }else {
+                $gambar_produk = null;
+            }
+
+        $produk->update([
             'nama_produk' => $request->nama_produk,
             'deskripsi_produk' => $request->deskripsi_produk,
             'kategori_id' => $request->kategori_id,
             'size_produk' => $request->size_produk,
             'harga_produk' => $request->harga_produk,
-            'tipe_id' => $request->tipe_id
-            ]);
-        
+            'tipe_id' => $request->tipe_id,
+            'gambar_produk' => $gambar_produk
+        ]);
+
         return redirect('/dashboard/produk')->with('status', 'Data Produk Berhasil Diubah!');
     }
     

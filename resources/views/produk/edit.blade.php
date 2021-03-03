@@ -16,7 +16,9 @@
 
             <div class="card-body">
                 <form method="post" action="{{ url('dashboard/produk') }}" enctype="multipart/form-data">
+                    <input type="hidden" name="id" id="id" value="{{$produk->id}}">
                     @csrf
+                    @method('PUT')
 
                     <div class="form-group">
                         <label class="text-dark" for="nama_produk">Nama</label>
@@ -72,17 +74,11 @@
                             @endforeach
                         </select>
                     </div>
-                    {{-- <div class="form-group">
-                        <label class="text-dark" for="gambar_produk">Gambar</label>
-                        <input type="text" class="form-control  @error('gambar_produk') is-invalid @enderror" id="gambar_produk" 
-                        placeholder="Masukkan Cover" name="gambar_produk" value="{{old('gambar_produk', $produk->gambar_produk)}}">
-                        @error('gambar_produk')
-                            <div class="invalid-feedback">{{ $message }}</div>
-                        @enderror
-                    </div> --}}
                     <div class="form-group">
                         <label class="text-dark" for="gambar_produk">Gambar</label>
-                        <input type="file" name="gambar_produk" class="form-control" id="gambar_produk">
+                        <br>
+                        <img src="{{ asset('image/product/'.$produk->gambar_produk) }}" width="250px" class="mx-auto mt-3 mb-3 rounded-lg">
+                        <input type="file" name="gambar_produk" class="form-control" id="gambar_produk" value="{{ $produk->gambar_produk }}">
                     </div>
 
                     <button type="submit" class="btn btn-danger col-lg-12">Tambah Data!</button>

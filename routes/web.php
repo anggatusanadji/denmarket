@@ -28,7 +28,7 @@ Route::prefix('dashboard')->middleware(['auth'])->group(function () {
     Route::resource('kategori', 'KategoriController');
     Route::resource('produk', 'ProdukController');
     Route::get('pesan', 'ContactController@index');
-    Route::get('pesan/{id}', 'ContactController@destroy');
+    Route::delete('pesan/{kontak}', 'ContactController@destroy');
     Route::get('logout', 'LoginController@logout')->name('logout');
     
 });

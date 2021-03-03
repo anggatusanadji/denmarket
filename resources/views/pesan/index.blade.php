@@ -41,10 +41,13 @@
                             <td>{{ $ktk->email}}</td>
                             <td>{{ $ktk->pesan}}</td>
                             <td class="text-center">
-                                <a href="{{ url('dashboard/pesan/'. $ktk->id) }}" class="btn btn-danger">
-                                    <i class="fa fa-trash"> Hapus</i>
-                                </a>
-                         
+                              <form action="{{ url('dashboard/pesan/'.$ktk->id) }}" method="post" class="d-inline" onsubmit="return confirm('Anda Yakin Ingin Menghapus Kategori {{$ktk->nama}}?')">
+                                @method('delete')
+                                @csrf
+                                <button type="submit" class="btn btn-danger">
+                                  <i class="fa fa-trash"></i>
+                                </button>
+                              </form>
                             </td>
                         </tr>
                         @endforeach
