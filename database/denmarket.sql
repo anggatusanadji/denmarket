@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 02 Mar 2021 pada 03.43
--- Versi server: 10.4.6-MariaDB
--- Versi PHP: 7.3.9
+-- Generation Time: Mar 03, 2021 at 09:56 AM
+-- Server version: 10.4.17-MariaDB
+-- PHP Version: 8.0.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -25,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `failed_jobs`
+-- Table structure for table `failed_jobs`
 --
 
 CREATE TABLE `failed_jobs` (
@@ -40,7 +39,7 @@ CREATE TABLE `failed_jobs` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `migrations`
+-- Table structure for table `migrations`
 --
 
 CREATE TABLE `migrations` (
@@ -50,7 +49,7 @@ CREATE TABLE `migrations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data untuk tabel `migrations`
+-- Dumping data for table `migrations`
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
@@ -60,7 +59,7 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tb_kategori`
+-- Table structure for table `tb_kategori`
 --
 
 CREATE TABLE `tb_kategori` (
@@ -72,18 +71,40 @@ CREATE TABLE `tb_kategori` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tb_kategori`
+-- Dumping data for table `tb_kategori`
 --
 
 INSERT INTO `tb_kategori` (`id`, `nama_kategori`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'Sepatu Futsal', '2021-03-01 06:04:22', '2021-03-01 06:04:22', NULL),
+(1, 'Sepatu Futsal', '2021-03-01 06:04:22', '2021-03-03 00:34:46', NULL),
 (2, 'Sepatu Bola', '2021-03-01 05:55:22', '2021-03-01 05:55:22', NULL),
-(3, 'Sepatu Lari', '2021-03-01 05:58:53', '2021-03-01 05:58:53', NULL);
+(3, 'Sepatu Lari', '2021-03-01 05:58:53', '2021-03-02 16:26:03', NULL);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tb_produk`
+-- Table structure for table `tb_kontak`
+--
+
+CREATE TABLE `tb_kontak` (
+  `id` int(3) NOT NULL,
+  `nama` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `pesan` varchar(255) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tb_kontak`
+--
+
+INSERT INTO `tb_kontak` (`id`, `nama`, `email`, `pesan`, `created_at`, `updated_at`) VALUES
+(1, 'angga', 'anggatusanadji@gmail.com', 'halo ngen', '2021-03-03 00:23:43', '2021-03-03 00:23:43');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_produk`
 --
 
 CREATE TABLE `tb_produk` (
@@ -94,36 +115,47 @@ CREATE TABLE `tb_produk` (
   `size_produk` varchar(30) NOT NULL,
   `harga_produk` varchar(30) NOT NULL,
   `tipe_id` int(3) NOT NULL,
+  `gambar_produk` varchar(100) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `tb_produk`
+--
+
+INSERT INTO `tb_produk` (`id`, `nama_produk`, `deskripsi_produk`, `kategori_id`, `size_produk`, `harga_produk`, `tipe_id`, `gambar_produk`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(2, 'Adidas c7', 'Sepatu yang menggunakan dominasi warna putih dengan corak biru dan juga logo adidas di sebelah kanan kiri sepatu yang berwarna hiitam', 2, '46', '300000', 1, '1614734117.png', '2021-03-02 17:15:17', '2021-03-02 17:15:17', NULL),
+(5, 'Adidas c7', 'Sepatu yang menggunakan dominasi warna putih dengan corak biru dan juga logo adidas di sebelah kanan kiri sepatu yang berwarna hiitam', 2, '46', '300000', 2, '1614743132.png', '2021-03-02 19:45:32', '2021-03-02 19:45:32', NULL);
+
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tb_tipe_produk`
+-- Table structure for table `tb_tipe_produk`
 --
 
 CREATE TABLE `tb_tipe_produk` (
   `id` int(3) NOT NULL,
   `tipe_produk` varchar(30) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tb_tipe_produk`
+-- Dumping data for table `tb_tipe_produk`
 --
 
-INSERT INTO `tb_tipe_produk` (`id`, `tipe_produk`, `created_at`, `updated_at`) VALUES
-(1, 'Popular', NULL, NULL),
-(2, 'Diskon', NULL, NULL);
+INSERT INTO `tb_tipe_produk` (`id`, `tipe_produk`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'Popular', NULL, NULL, NULL),
+(2, 'Diskon', NULL, NULL, NULL),
+(3, 'None', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `users`
+-- Table structure for table `users`
 --
 
 CREATE TABLE `users` (
@@ -139,7 +171,7 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data untuk tabel `users`
+-- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id`, `name`, `username`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
@@ -150,25 +182,31 @@ INSERT INTO `users` (`id`, `name`, `username`, `email`, `email_verified_at`, `pa
 --
 
 --
--- Indeks untuk tabel `failed_jobs`
+-- Indexes for table `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `migrations`
+-- Indexes for table `migrations`
 --
 ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `tb_kategori`
+-- Indexes for table `tb_kategori`
 --
 ALTER TABLE `tb_kategori`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `tb_produk`
+-- Indexes for table `tb_kontak`
+--
+ALTER TABLE `tb_kontak`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tb_produk`
 --
 ALTER TABLE `tb_produk`
   ADD PRIMARY KEY (`id`),
@@ -176,64 +214,70 @@ ALTER TABLE `tb_produk`
   ADD KEY `kategori_id` (`kategori_id`);
 
 --
--- Indeks untuk tabel `tb_tipe_produk`
+-- Indexes for table `tb_tipe_produk`
 --
 ALTER TABLE `tb_tipe_produk`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `users`
+-- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `users_email_unique` (`email`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `failed_jobs`
+-- AUTO_INCREMENT for table `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `migrations`
+-- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT untuk tabel `tb_kategori`
+-- AUTO_INCREMENT for table `tb_kategori`
 --
 ALTER TABLE `tb_kategori`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT untuk tabel `tb_produk`
+-- AUTO_INCREMENT for table `tb_kontak`
+--
+ALTER TABLE `tb_kontak`
+  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `tb_produk`
 --
 ALTER TABLE `tb_produk`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT untuk tabel `tb_tipe_produk`
+-- AUTO_INCREMENT for table `tb_tipe_produk`
 --
 ALTER TABLE `tb_tipe_produk`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT untuk tabel `users`
+-- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
+-- Constraints for dumped tables
 --
 
 --
--- Ketidakleluasaan untuk tabel `tb_produk`
+-- Constraints for table `tb_produk`
 --
 ALTER TABLE `tb_produk`
   ADD CONSTRAINT `tb_produk_ibfk_2` FOREIGN KEY (`tipe_id`) REFERENCES `tb_tipe_produk` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
