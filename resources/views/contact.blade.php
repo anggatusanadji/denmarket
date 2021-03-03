@@ -65,21 +65,36 @@
                     </div>
                 </div>
                 <p class="contact-text mt-4">Send Message</p>
-                <div class="form-group">
-                    <label for="nama">Nama</label>
-                    <input type="text" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label for="nama">Email</label>
-                    <input type="text" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label for="nama">Message</label>
-                    <input type="text" class="form-control">
-                </div>
-                <div class="form-group d-flex justify-content-end">
-                    <a class="btn ml-auto" href="">Send Message</a>
-                </div>
+                <form method="post" action="{{ url('contact') }}">
+                    @csrf
+                    <div class="form-group">
+                        <label class="text-dark" for="nama">Nama</label>
+                        <input type="text" class="form-control @error('nama') is-invalid @enderror" id="nama" 
+                        name="nama" value="{{old('nama')}}">
+                        @error('nama')
+                            <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
+                    <div class="form-group">
+                        <label class="text-dark" for="email">Email</label>
+                        <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" 
+                        name="email" value="{{old('email')}}">
+                        @error('email')
+                            <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
+                    <div class="form-group">
+                        <label class="text-dark" for="pesan">Message</label>
+                        <input type="text" class="form-control @error('pesan') is-invalid @enderror" id="pesan" 
+                        name="pesan" value="{{old('pesan')}}">
+                        @error('pesan')
+                            <div class="invalid-feedback">{{ $pesan }}</div>
+                        @enderror
+                    </div>
+                    <div class="form-group d-flex justify-content-end">
+                        <button class="btn ml-auto" type="submit">Send Message</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

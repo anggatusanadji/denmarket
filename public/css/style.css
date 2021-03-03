@@ -288,6 +288,7 @@ background: #FF4A4A;
   background: #FF4A4A;
   transform: skewY(345deg);
   transition: 0.5s;
+  margin-left: -15px;
 }
 
 

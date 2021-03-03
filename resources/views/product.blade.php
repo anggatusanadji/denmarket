@@ -42,137 +42,19 @@
             </div>
             <!-- row 1 -->
             <div class="row justify-content-center mt-4">
-                <div class="card-deck">
-                    <div class="card product-card" data-aos="flip-right" data-aos-duration="1000">
+                <div class="row p-0">
+                    @foreach($produk as $prd)
+                    <div class="card product-card col-lg-3" data-aos="flip-right" data-aos-duration="1000">
                         <div class="imgBox">
                             <img src="{{ asset('image/product/football1.png') }}" alt="" class="shoe">
                         </div>
                         <div class="contentBox">
-                            <h3>Football Shoes</h3>
-                            <h2 class="price"><small>Rp.</small> 200.000</h2>
+                            <h3>{{ $prd->nama_produk }}</h3>
+                            <h2 class="price"><small>Rp.</small>{{ $prd->harga_produk }}</h2>
                             <a href="{{url('product/detail-product')}}" class="buy">Buy Now</a>
                         </div>
                     </div>
-                    <div class="card product-card" data-aos="flip-right" data-aos-duration="1000">
-                        <div class="imgBox">
-                            <img src="{{ asset('image/product/football2.png') }}" alt="" class="shoe">
-                        </div>
-                        <div class="contentBox">
-                            <h3>Football Shoes</h3>
-                            <h2 class="price"><small>Rp.</small> 200.000</h2>
-                            <a href="#" class="buy">Buy Now</a>
-                        </div>
-                    </div>
-                    <div class="card product-card" data-aos="flip-right" data-aos-duration="1000">
-                        <div class="imgBox">
-                            <img src="{{ asset('image/product/football3.png') }}" alt="" class="shoe">
-                        </div>
-                        <div class="contentBox">
-                            <h3>Football Shoes</h3>
-                            <h2 class="price"><small>Rp.</small> 200.000</h2>
-                            <a href="#" class="buy">Buy Now</a>
-                        </div>
-                    </div>
-                    <div class="card product-card" data-aos="flip-right" data-aos-duration="1500">
-                        <div class="imgBox">
-                            <img src="{{ asset('image/product/football4.png') }}" alt="" class="shoe">
-                        </div>
-                        <div class="contentBox">
-                            <h3>Football Shoes</h3>
-                            <h2 class="price"><small>Rp.</small> 200.000</h2>
-                            <a href="#" class="buy">Buy Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- row 2 -->
-            <div class="row justify-content-center">
-                <div class="card-deck">
-                    <div class="card product-card" data-aos="flip-right" data-aos-duration="1000">
-                        <div class="imgBox">
-                            <img src="{{ asset('image/product/football5.png') }}" alt="" class="shoe">
-                        </div>
-                        <div class="contentBox">
-                            <h3>Football Shoes</h3>
-                            <h2 class="price"><small>Rp.</small> 200.000</h2>
-                            <a href="#" class="buy">Buy Now</a>
-                        </div>
-                    </div>
-                    <div class="card product-card" data-aos="flip-right" data-aos-duration="1000">
-                        <div class="imgBox">
-                            <img src="{{ asset('image/product/football6.png') }}" alt="" class="shoe">
-                        </div>
-                        <div class="contentBox">
-                            <h3>Football Shoes</h3>
-                            <h2 class="price"><small>Rp.</small> 200.000</h2>
-                            <a href="#" class="buy">Buy Now</a>
-                        </div>
-                    </div>
-                    <div class="card product-card" data-aos="flip-right" data-aos-duration="1000">
-                        <div class="imgBox">
-                            <img src="{{ asset('image/product/football7.png') }}" alt="" class="shoe">
-                        </div>
-                        <div class="contentBox">
-                            <h3>Football Shoes</h3>
-                            <h2 class="price"><small>Rp.</small> 200.000</h2>
-                            <a href="#" class="buy">Buy Now</a>
-                        </div>
-                    </div>
-                    <div class="card product-card" data-aos="flip-right" data-aos-duration="1000">
-                        <div class="imgBox">
-                            <img src="{{ asset('image/product/football8.png') }}" alt="" class="shoe">
-                        </div>
-                        <div class="contentBox">
-                            <h3>Football Shoes</h3>
-                            <h2 class="price"><small>Rp.</small> 200.000</h2>
-                            <a href="#" class="buy">Buy Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- row 3 -->
-            <div class="row justify-content-center">
-                <div class="card-deck">
-                    <div class="card product-card" data-aos="flip-right" data-aos-duration="1000">
-                        <div class="imgBox">
-                            <img src="{{ asset('image/product/football9.png') }}" alt="" class="shoe">
-                        </div>
-                        <div class="contentBox">
-                            <h3>Football Shoes</h3>
-                            <h2 class="price"><small>Rp.</small> 200.000</h2>
-                            <a href="#" class="buy">Buy Now</a>
-                        </div>
-                    </div>
-                    <div class="card product-card" data-aos="flip-right" data-aos-duration="1000">
-                        <div class="imgBox">
-                            <img src="{{ asset('image/product/football10.png') }}" alt="" class="shoe">
-                        </div>
-                        <div class="contentBox">
-                            <h3>Football Shoes</h3>
-                            <h2 class="price"><small>Rp.</small> 200.000</h2>
-                            <a href="#" class="buy">Buy Now</a>
-                        </div>
-                    </div>
-                    <div class="card product-card" data-aos="flip-right" data-aos-duration="1000">
-                        <div class="imgBox">
-                            <img src="{{ asset('image/product/football11.png') }}" alt="" class="shoe">
-                        </div>
-                        <div class="contentBox">
-                            <h3>Football Shoes</h3>
-                            <h2 class="price"><small>Rp.</small> 200.000</h2>
-                            <a href="#" class="buy">Buy Now</a>
-                        </div>
-                    </div>
-                    <div class="card product-card" data-aos="flip-right" data-aos-duration="1000">
-                        <div class="imgBox">
-                            <img src="{{ asset('image/product/football12.png') }}" alt="" class="shoe">
-                        </div>
-                        <div class="contentBox">
-                            <h3>Football Shoes</h3>
-                            <h2 class="price"><small>Rp.</small> 200.000</h2>
-                            <a href="#" class="buy">Buy Now</a>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>

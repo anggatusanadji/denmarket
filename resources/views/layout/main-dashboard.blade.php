@@ -81,6 +81,11 @@ rel="stylesheet">
         <span>Kategori</span></a>
     </li>
     <li class="nav-item">
+        <a class="nav-link" href="{{ url('dashboard/pesan') }}">
+        <i class="fas fa-fw fa-table"></i>
+        <span>Pesan</span></a>
+    </li>
+    <li class="nav-item">
         <a class="nav-link" href="{{ url('dashboard/admin') }}">
         <i class="fas fa-fw fa-table"></i>
         <span>Admin</span></a>

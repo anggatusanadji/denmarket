@@ -21,6 +21,12 @@ class ProdukController extends Controller
         $produk = Produk::all();
         return view('produk.index', ['produk' => $produk]);
     }
+    public function indexview()
+    {
+        // $kategori = DB::table('films')->get();
+        $produk = Produk::where('kategori_id', 2)->get();
+        return view('product', ['produk' => $produk]);
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -53,7 +59,7 @@ class ProdukController extends Controller
         ]);
 
         $img = $request->file('gambar_produk');
-        $gambar_produk = $img->getClientOriginalName();
+        $gambar_produk = time(). "." .$img->getClientOriginalExtension();
         $upDir = 'image/product';
         $img->move($upDir, $gambar_produk);
 
@@ -114,6 +120,17 @@ class ProdukController extends Controller
             'tipe_id' => 'required',
             'gambar_produk' => 'required|image|mimes:jpg,jpeg,png|max:2048'   
         ]);
+        
+        if ($request->hasfile('gambar_produk')){
+            $file = $request->file('gambar_produk');
+            $extension = $file->getClientOriginalExtension();
+            $filename = time().'.'.$extension;
+            $file->move(public_path().'image/product',$filename);
+            $produk->gambar_produk=$filename;
+        } else {
+            return $request;
+            $produk->gambar_produk='';
+        }
 
         Produk::where('id', $produk->id)
             ->update([
@@ -122,8 +139,7 @@ class ProdukController extends Controller
             'kategori_id' => $request->kategori_id,
             'size_produk' => $request->size_produk,
             'harga_produk' => $request->harga_produk,
-            'tipe_id' => $request->tipe_id,
-            'gambar_produk' => $request->gambar_produk
+            'tipe_id' => $request->tipe_id
             ]);
         
         return redirect('/dashboard/produk')->with('status', 'Data Produk Berhasil Diubah!');
@@ -144,6 +160,6 @@ class ProdukController extends Controller
         // Menghapus permanen
         $produk->forceDelete();
 
-        return redirect('/dashboard/produk')->with('status', 'Data Buku Berhasil Dihapus!');
+        return redirect('/dashboard/produk')->with('status', 'Data Produk Berhasil Dihapus!');
     }
 }

@@ -19,6 +19,6 @@ class Produk extends Model
 
     public function tipe()
     {
-        return $this->belongsTo(Tipe::class);
+        return $this->belonsTo(Tipe::class);
     }
 }

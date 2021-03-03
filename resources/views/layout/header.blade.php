@@ -34,8 +34,8 @@
                         <a class="nav-link" href="{{url('/about')}}">About</a>
                         <div class="underline-bar"></div>
                     </li>
-                    <li class="nav-item {{ Request::is('contact') ? 'active' : '' }}">
-                        <a class="nav-link" href="{{url('/contact')}}">Contact</a>
+                    <li class="nav-item {{ Request::is('contact/create') ? 'active' : '' }}">
+                        <a class="nav-link" href="{{url('/contact/create')}}">Contact</a>
                         <div class="underline-bar"></div>
                     </li>
                     <li class="nav-item {{ Request::is('location') ? 'active' : '' }}">
