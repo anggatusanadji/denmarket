@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 03, 2021 at 09:56 AM
+-- Generation Time: Mar 04, 2021 at 09:54 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.2
 
@@ -91,15 +91,9 @@ CREATE TABLE `tb_kontak` (
   `email` varchar(255) NOT NULL,
   `pesan` varchar(255) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `tb_kontak`
---
-
-INSERT INTO `tb_kontak` (`id`, `nama`, `email`, `pesan`, `created_at`, `updated_at`) VALUES
-(1, 'angga', 'anggatusanadji@gmail.com', 'halo ngen', '2021-03-03 00:23:43', '2021-03-03 00:23:43');
 
 -- --------------------------------------------------------
 
@@ -126,8 +120,8 @@ CREATE TABLE `tb_produk` (
 --
 
 INSERT INTO `tb_produk` (`id`, `nama_produk`, `deskripsi_produk`, `kategori_id`, `size_produk`, `harga_produk`, `tipe_id`, `gambar_produk`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(2, 'Adidas c7', 'Sepatu yang menggunakan dominasi warna putih dengan corak biru dan juga logo adidas di sebelah kanan kiri sepatu yang berwarna hiitam', 2, '46', '300000', 1, '1614734117.png', '2021-03-02 17:15:17', '2021-03-02 17:15:17', NULL),
-(5, 'Adidas c7', 'Sepatu yang menggunakan dominasi warna putih dengan corak biru dan juga logo adidas di sebelah kanan kiri sepatu yang berwarna hiitam', 2, '46', '300000', 2, '1614743132.png', '2021-03-02 19:45:32', '2021-03-02 19:45:32', NULL);
+(1, 'Adidas c7', 'Sepatu yang menggunakan dominasi warna putih dengan corak biru dan juga logo adidas di sebelah kanan kiri sepatu yang berwarna hiitam', 2, '46', '300000', 3, '1614829642.png', '2021-03-03 19:47:22', '2021-03-03 19:47:22', NULL),
+(3, 'Adidas c7', 'Sepatu yang menggunakan dominasi warna putih dengan corak biru dan juga logo adidas di sebelah kanan kiri sepatu yang berwarna hiitam', 2, '12', '300000', 1, '1614847163.png', '2021-03-03 19:55:49', '2021-03-04 00:39:23', NULL);
 
 -- --------------------------------------------------------
 
@@ -258,7 +252,7 @@ ALTER TABLE `tb_kontak`
 -- AUTO_INCREMENT for table `tb_produk`
 --
 ALTER TABLE `tb_produk`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `tb_tipe_produk`
