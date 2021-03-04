@@ -13,8 +13,8 @@
                         <p class="font-weight-normal text-hero">be a force in the court with your shoes</p>
                     </div>
                     <div class="explore">
-                        <a type="button" class="btn mr-2" ><i class="fas fa-chevron-down" style="color:#fff;"></i></a>
-                        <a class="font-weight-normal mr-2" for="scroll-bawah">Explore More</a>
+                        <a type="button" class="btn mr-2" href="#trending"><i class="fas fa-chevron-down" style="color:#fff;"></i></a>
+                        <a class="font-weight-normal mr-2" href="#trending">Explore More</a>
                         <img src="{{ asset('image/line.svg') }}" alt="" style="width:30px;">
                     </div>
                     <div class="elipse mt-5">
@@ -41,10 +41,10 @@
 
         <div class="trending">
             <div class="container"">
-                <div class="row">
+                <div class="row" id="trending">
                     <p class="font-weight-bold trending-title ml-auto" id="scroll-bawah><span style="color: #FF4A4A">Trending</span> Collection</p>
                 </div>
-                <div class="row justify-content-center">
+                <div class="row">
                     <div class="card-deck">
                         @foreach($produk as $prd)
                         <div class="card col-lg-6 col-12" data-aos="fade-up" data-aos-duration="1000">

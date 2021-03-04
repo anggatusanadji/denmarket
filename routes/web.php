@@ -51,7 +51,7 @@ Route::prefix('product')->group(function () {
     Route::get('futsal', 'ProdukController@indexfutsal');
     Route::get('football', 'ProdukController@indexfootball');
     Route::get('running', 'ProdukController@indexrunning');
-    Route::get('detail-product', 'DetailProductViewController@index');
+    Route::get('detail-product/{produk}', 'ProdukController@detailProduct');
 });
 Route::view('about', 'about');
 Route::view('location', 'location');

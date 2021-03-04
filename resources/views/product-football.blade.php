@@ -11,8 +11,8 @@
                     <p class="font-weight-normal text-hero2">Explore your world in quality and colorfull shoes</p>
                 </div>
                 <div class="explore">
-                    <a type="button" class="btn mr-2" ><i class="fas fa-chevron-down" style="color:#fff;"></i></a>
-                    <a class="font-weight-normal mr-2">Check More</a>
+                    <a type="button" class="btn mr-2" href="#produk"><i class="fas fa-chevron-down" style="color:#fff;"></i></a>
+                    <a class="font-weight-normal mr-2" href="#produk">Check More</a>
                     <img src="{{ asset('image/line.svg') }}" alt="" style="width:30px;">
                 </div>
             </div>
@@ -23,7 +23,7 @@
     </div>
     
     <div class="container">
-        <div class="product">
+        <div class="product" id="produk">
             <div class="row text-center justify-content-center">
                 <ul class="col-6 d-flex justify-content-between">
                     <li class="active">
@@ -41,17 +41,17 @@
                 </ul>
             </div>
             <!-- row 1 -->
-            <div class="row justify-content-center mt-4">
+            <div class="row mt-4">
                 <div class="row p-0">
                     @foreach($produk as $prd)
-                    <div class="card product-card col-lg-3" data-aos="flip-right" data-aos-duration="1000">
+                    <div class="card product-card col-lg-4" data-aos="flip-right" data-aos-duration="1000">
                         <div class="imgBox">
                             <img src="{{ asset('image/product/'.$prd->gambar_produk) }}" alt="" class="shoe">
                         </div>
                         <div class="contentBox">
                             <h3>{{ $prd->nama_produk }}</h3>
                             <h2 class="price"><small>Rp.</small>{{ $prd->harga_produk }}</h2>
-                            <a href="{{url('product/detail-product')}}" class="buy">Buy Now</a>
+                            <a href="{{ url('product/detail-product/'.$prd->id) }}" class="buy">Buy Now</a>
                         </div>
                     </div>
                     @endforeach

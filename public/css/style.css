@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Quicksand', sans-serif;
+    scroll-behavior: smooth;
 }
 .btn{
     background-color: #FF4A4A;
@@ -316,6 +317,8 @@ background: #FF4A4A;
   padding-top: 20px;
   z-index: 1;
 }
+
+
 /*
 .product-card .imgBox img {
     max-width: 100%;

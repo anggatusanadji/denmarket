@@ -106,6 +106,10 @@ class ProdukController extends Controller
     {
         return view('produk.show', compact('produk'));
     }
+    public function detailProduct(Produk $produk)
+    {
+        return view('detail-product', compact('produk'));
+    }
 
     /**
      * Show the form for editing the specified resource.
