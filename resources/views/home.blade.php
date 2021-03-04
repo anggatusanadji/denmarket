@@ -3,8 +3,8 @@
 @section('title' ,'Home')
 
 @section('container')
-    <div class="container">
-        <div class="hero mt-2">
+    <div class="container" style="margin-top: 80px">
+        <div class="hero">
             <div class="row reverse-column h-100">
                 <div class="hero-text col-lg-5 col-md-5 col-12 mt-5 d-flex flex-column justify-content-center"  data-aos="fade-right" data-aos-duration="1000">
                     <div>
@@ -44,7 +44,7 @@
                 <div class="row" id="trending">
                     <p class="font-weight-bold trending-title ml-auto" id="scroll-bawah><span style="color: #FF4A4A">Trending</span> Collection</p>
                 </div>
-                <div class="row">
+                <div class="row">  
                     <div class="card-deck">
                         @foreach($produk as $prd)
                         <div class="card col-lg-6 col-12" data-aos="fade-up" data-aos-duration="1000">
@@ -188,5 +188,7 @@
             </div>
         </div>
     </div>
+
+    
     <!-- end container -->
 @endsection

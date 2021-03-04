@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\DB;
 use App\Kategori;
 use App\Tipe;
 use App\Produk;
+use File;
 
 class ProdukController extends Controller
 {
@@ -132,49 +133,46 @@ class ProdukController extends Controller
      * @param  \App\Produk  $produk
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Produk $produk)
+    public function update(Request $request, $id)
     {
-        $request->validate([
-            'nama_produk' => 'required',
-            'deskripsi_produk' => 'required', 
-            'kategori_id' => 'required', 
-            'size_produk' => 'required', 
-            'harga_produk' => 'required',
-            'tipe_id' => 'required',
-            'gambar_produk' => 'required|image|mimes:jpg,jpeg,png|max:2048'   
-        ]);
-            
-        $img = $request->file('gambar_produk');
-        if($request->hasFile(public_path('image/product/'.$gambar_produk = time(). "." .$img->getClientOriginalExtension()))){
-            unlink(public_path('image/product/'.$gambar_produk = time(). "." .$img->getClientOriginalExtension()));
-        }else{
-            $gambar_produk = time(). "." .$img->getClientOriginalExtension();
-            $upDir = 'image/product';
-            $img->move($upDir, $gambar_produk);
-        }
-        //upload new file
-        
+        $produk = Produk::where('id', $id)->first();
 
-        Produk::where('id', $produk->id)
+        $this->validate($request, [
+            'gambar_produk' => 'image|mimes:jpeg,png,jpg|max:2048'
+        ]);
+
+        if($request->hasfile('gambar_produk')){
+
+            File::delete('image/product/'.$produk->gambar_produk);
+
+            $img = $request->file('gambar_produk');
+            $img_name = time(). "." .$img->getClientOriginalExtension();
+
+            $upDir = 'image/product';
+            $img->move($upDir, $img_name);
+
+            Produk::where('id', $id)->update([
+                'nama_produk' => $request->nama_produk,
+                'deskripsi_produk' => $request->deskripsi_produk,
+                'kategori_id' => $request->kategori_id,
+                'size_produk' => $request->size_produk,
+                'harga_produk' => $request->harga_produk,
+                'tipe_id' => $request->tipe_id,
+                'gambar_produk' => $img_name,
+            ]);
+
+        }else{
+            
+            Produk::where('id', $produk->id)
             ->update([
             'nama_produk' => $request->nama_produk,
             'deskripsi_produk' => $request->deskripsi_produk,
             'kategori_id' => $request->kategori_id,
             'size_produk' => $request->size_produk,
             'harga_produk' => $request->harga_produk,
-            'tipe_id' => $request->tipe_id,
-            'gambar_produk' => $gambar_produk,
+            'tipe_id' => $request->tipe_id
         ]);
-
-
-            // if (request('gambar_produk')) {
-            //     Storage::delete($produk->gambar_produk);
-            //     $gambar_produk = request()->file('gambar_produk')->store('image/product');
-            // }elseif($produk->gambar_produk){
-            //     $gambar_produk = $produk->gambar_produk;
-            // }else {
-            //     $gambar_produk = null;
-            // }
+        }
 
         return redirect('/dashboard/produk')->with('status', 'Data Produk Berhasil Diubah!');
     }

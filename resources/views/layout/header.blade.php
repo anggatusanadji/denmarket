@@ -14,38 +14,41 @@
         <title>@yield('title')</title>
     </head>
     <body>
-    <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand font-weight-bold" href="#"><span style=color:#FF4A4A>DenMarket</span> Sport</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse navbar-denmarket" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item {{ Request::is('home') ? 'active' : '' }}">
-                        <a class="nav-link" href="{{url('/home')}}">Home</a>
-                        <div class="underline-bar"></div>
-                    </li>
-                    <li class="nav-item {{ Request::is('product/football', 'product/futsal', 'product/running') ? 'active' : '' }}">
-                        <a class="nav-link" href="{{url('/product/football')}}">Product</a>
-                        <div class="underline-bar"></div>
-                    </li>
-                    <li class="nav-item {{ Request::is('about') ? 'active' : '' }}">
-                        <a class="nav-link" href="{{url('/about')}}">About</a>
-                        <div class="underline-bar"></div>
-                    </li>
-                    <li class="nav-item {{ Request::is('contact/create') ? 'active' : '' }}">
-                        <a class="nav-link" href="{{url('/contact/create')}}">Contact</a>
-                        <div class="underline-bar"></div>
-                    </li>
-                    <li class="nav-item {{ Request::is('location') ? 'active' : '' }}">
-                        <a class="nav-link" href="{{url('/location')}}">Location</a>
-                        <div class="underline-bar"></div>
-                    </li>
-                </ul>
-            </div>
-        </nav>        
+    <div class="w-100 bg-white" style="z-index: 10; position:fixed; top:0;">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-white">
+                <a class="navbar-brand font-weight-bold" href="#"><span style=color:#FF4A4A>DenMarket</span> Sport</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse navbar-denmarket" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item {{ Request::is('home') ? 'active' : '' }}">
+                            <a class="nav-link" href="{{url('/home')}}">Home</a>
+                            <div class="underline-bar"></div>
+                        </li>
+                        <li class="nav-item {{ Request::is('product/football', 'product/futsal', 'product/running') ? 'active' : '' }}">
+                            <a class="nav-link" href="{{url('/product/football')}}">Product</a>
+                            <div class="underline-bar"></div>
+                        </li>
+                        <li class="nav-item {{ Request::is('about') ? 'active' : '' }}">
+                            <a class="nav-link" href="{{url('/about')}}">About</a>
+                            <div class="underline-bar"></div>
+                        </li>
+                        <li class="nav-item {{ Request::is('contact/create') ? 'active' : '' }}">
+                            <a class="nav-link" href="{{url('/contact/create')}}">Contact</a>
+                            <div class="underline-bar"></div>
+                        </li>
+                        <li class="nav-item {{ Request::is('location') ? 'active' : '' }}">
+                            <a class="nav-link" href="{{url('/location')}}">Location</a>
+                            <div class="underline-bar"></div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>  
+        </div>      
     </div>
+    
     @yield('container')
 
     <!-- start footer -->

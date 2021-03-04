@@ -3,7 +3,7 @@
 @section('title' ,'Contact')
 
 @section('container')
-<div class="container">
+<div class="container" style="margin-top: 100px">
     <div class="contact-us">
         <div class="row">
             <div class="col-lg-6">
