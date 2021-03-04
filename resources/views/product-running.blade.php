@@ -26,16 +26,16 @@
         <div class="product">
             <div class="row text-center justify-content-center">
                 <ul class="col-6 d-flex justify-content-between">
+                    <li>
+                        <a href="{{url('product/football')}}">Football Shoes</a>
+                        <div class="underline"></div>
+                    </li>
+                    <li>
+                        <a href="{{url('product/futsal')}}">Futsal Shoes</a>
+                        <div class="underline"></div>
+                    </li>
                     <li class="active">
-                        <a href="">Football Shoes</a>
-                        <div class="underline"></div>
-                    </li>
-                    <li>
-                        <a href="">Futsal Shoes</a>
-                        <div class="underline"></div>
-                    </li>
-                    <li>
-                        <a href="">Running Shoes</a>
+                        <a href="{{url('product/running')}}">Running Shoes</a>
                         <div class="underline"></div>
                     </li>
                 </ul>

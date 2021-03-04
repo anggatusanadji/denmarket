@@ -26,7 +26,15 @@ Route::prefix('dashboard')->middleware(['auth'])->group(function () {
     Route::get('', 'HomeController@index')->name('home');
     Route::resource('admin', 'AdminController');
     Route::resource('kategori', 'KategoriController');
-    Route::resource('produk', 'ProdukController');
+
+    Route::get('produk', 'ProdukController@index');
+    Route::post('produk', 'ProdukController@store');
+    Route::get('produk/create', 'ProdukController@create');
+    Route::get('produk/{produk}', 'ProdukController@show');
+    Route::put('produk/{produk}', 'ProdukController@update');
+    Route::get('produk/{produk}/edit', 'ProdukController@edit');
+    Route::delete('produk/{produk}', 'ProdukController@destroy');
+
     Route::get('pesan', 'ContactController@index');
     Route::delete('pesan/{kontak}', 'ContactController@destroy');
     Route::get('logout', 'LoginController@logout')->name('logout');
@@ -40,12 +48,14 @@ Route::get('/', function () {
 
 // route view user
 Route::prefix('product')->group(function () {
-    Route::get('', 'ProdukController@indexview');
+    Route::get('futsal', 'ProdukController@indexfutsal');
+    Route::get('football', 'ProdukController@indexfootball');
+    Route::get('running', 'ProdukController@indexrunning');
     Route::get('detail-product', 'DetailProductViewController@index');
 });
 Route::view('about', 'about');
 Route::view('location', 'location');
-Route::get('home', 'HomeProductViewController@index');
+Route::get('home', 'ProdukController@indexview');
 
 // contact
 Route::get('contact/create', 'ContactController@create');

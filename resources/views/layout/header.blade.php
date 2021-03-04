@@ -26,8 +26,8 @@
                         <a class="nav-link" href="{{url('/home')}}">Home</a>
                         <div class="underline-bar"></div>
                     </li>
-                    <li class="nav-item {{ Request::is('product', 'product/detail-product') ? 'active' : '' }}">
-                        <a class="nav-link" href="{{url('/product')}}">Product</a>
+                    <li class="nav-item {{ Request::is('product/football', 'product/futsal', 'product/running') ? 'active' : '' }}">
+                        <a class="nav-link" href="{{url('/product/football')}}">Product</a>
                         <div class="underline-bar"></div>
                     </li>
                     <li class="nav-item {{ Request::is('about') ? 'active' : '' }}">
