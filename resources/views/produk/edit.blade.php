@@ -29,9 +29,9 @@
                         @enderror
                     </div>
                     <div class="form-group">
-                        <label class="text-dark" for="deskripsi_produk">Deskripsi</label>
-                        <input type="text" class="form-control @error('deskripsi_produk') is-invalid @enderror" id="deskripsi_produk" 
-                        placeholder="Masukkan Deskripsi Produk" name="deskripsi_produk" value="{{old('deskripsi_produk', $produk->deskripsi_produk)}}">
+                        <label class="text-dark" for="deskripsi_produk">Deskripsi Buku</label>
+                        <textarea type="text" class="form-control  @error('deskripsi_produk') is-invalid @enderror" id="deskripsi_produk" 
+                        placeholder="Masukkan Deskripsi" name="deskripsi_produk">{{old('deskripsi_produk', $produk->deskripsi_produk)}}</textarea>
                         @error('deskripsi_produk')
                             <div class="invalid-feedback">{{ $message }}</div>
                         @enderror

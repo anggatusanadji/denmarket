@@ -44,11 +44,13 @@
                 <div class="row" id="trending">
                     <p class="font-weight-bold trending-title ml-auto" id="scroll-bawah><span style="color: #FF4A4A">Trending</span> Collection</p>
                 </div>
-                <div class="row">  
+                <div class="row">    
                     <div class="card-deck">
                         @foreach($produk as $prd)
-                        <div class="card col-lg-6 col-12" data-aos="fade-up" data-aos-duration="1000">
-                            <img src="{{ asset('image/product/'.$prd->gambar_produk) }}" alt="" class="w-100 h-100">
+                        <div class="col-lg-3">
+                            <div class="card col-lg-12 col-12" data-aos="fade-up" data-aos-duration="1000">
+                                <img src="{{ asset('image/product/'.$prd->gambar_produk) }}" alt="" class="w-100 h-100">
+                            </div>
                         </div>
                         @endforeach
                     </div>
@@ -68,99 +70,47 @@
                 <div class="heading wow fadeIn text-center">
                     <h2>Our
                         <span>Testimonials</span></h2>
-                    <p>Lorem Ipsum is simply dummy text of the printing and type setting industry
-                        when an unknown printer took
-                        <br>
-                        a galley of type and scrambled it to make a type specimen book It has survived
-                        not only five centuries.</p>
+                    <p>Some testimonials from customers who have purchased our products</p>
                 </div>
                 <div class="row">
                     <!-- Box-1 -->
                     <div class="col-lg-6">
-                        <div class="box d-flex align-items-center wow fadeInLeft">
+                        <div class="box d-flex align-items-center wow fadeInLeft h-100">
                             <div class="content">
-                                <h3>Your Name
-                                    <span>Graphic Designer</span></h3>
-                                <p>Lorem Ipsum is simply dummy text of the printing and type setting industry when an unknown printer</p>
-                                <div class="social d-flex">
-                                    <a href="#0" class="icon d-flex align-items-center justify-content-center">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                    <a href="#0" class="icon d-flex align-items-center justify-content-center">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                    <a href="#0" class="icon d-flex align-items-center justify-content-center">
-                                        <i class="fab fa-dribbble"></i>
-                                    </a>
-                                </div>
+                                <h3 class="text-danger">Gana Untaran</h3>
+                                <p>A very good product, prioritizing quality and user comfort</p>
                             </div>
                             <div class="image"><img src="https://i.ibb.co/8x9xK4H/team.jpg" alt="" class="img-fluid"></div>
                         </div>
                     </div>
                     <!-- Box-2 -->
                     <div class="col-lg-6">
-                        <div class="box d-flex align-items-center wow fadeInRight">
+                        <div class="box d-flex align-items-center wow fadeInRight h-100">
                             <div class="content">
-                                <h3>Your Name
-                                    <span>Graphic Designer</span></h3>
-                                <p>Lorem Ipsum is simply dummy text of the printing and type setting industry when an unknown printer</p>
-                                <div class="social d-flex">
-                                    <a href="#0" class="icon d-flex align-items-center justify-content-center">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                    <a href="#0" class="icon d-flex align-items-center justify-content-center">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                    <a href="#0" class="icon d-flex align-items-center justify-content-center">
-                                        <i class="fab fa-dribbble"></i>
-                                    </a>
-                                </div>
+                                <h3 class="text-danger">Surya Amerta</h3>
+                                <p>a good shop, selling quality products at the right price</p>
                             </div>
-                            <div class="image"><img src="https://i.ibb.co/8x9xK4H/team.jpg" alt="" class="img-fluid"></div>
+                            <div class="image h-80"><img src="https://i.ibb.co/8x9xK4H/team.jpg" alt="" class="img-fluid"></div>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <!-- Box-3 -->
                     <div class="col-lg-6">
-                        <div class="box d-flex align-items-center wow fadeInLeft">
+                        <div class="box d-flex align-items-center wow fadeInLeft h-100">
                             <div class="content">
-                                <h3>Your Name
-                                    <span>Graphic Designer</span></h3>
-                                <p>Lorem Ipsum is simply dummy text of the printing and type setting industry when an unknown printer</p>
-                                <div class="social d-flex">
-                                    <a href="#0" class="icon d-flex align-items-center justify-content-center">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                    <a href="#0" class="icon d-flex align-items-center justify-content-center">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                    <a href="#0" class="icon d-flex align-items-center justify-content-center">
-                                        <i class="fab fa-dribbble"></i>
-                                    </a>
-                                </div>
+                                <h3 class="text-danger">Wahyu Purnama</h3>
+                                <p>very trustworthy shop, great. I will buy it here again</p>
                             </div>
                             <div class="image"><img src="https://i.ibb.co/8x9xK4H/team.jpg" alt="" class="img-fluid"></div>
                         </div>
                     </div>
                     <!-- Box-4 -->
                     <div class="col-lg-6">
-                        <div class="box d-flex align-items-center wow fadeInRight">
+                        <div class="box d-flex align-items-center wow fadeInRight h-100">
                             <div class="content">
-                                <h3>Your Name
-                                    <span>Graphic Designer</span></h3>
-                                <p>Lorem Ipsum is simply dummy text of the printing and type setting industry when an unknown printer</p>
-                                <div class="social d-flex">
-                                    <a href="#0" class="icon d-flex align-items-center justify-content-center">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                    <a href="#0" class="icon d-flex align-items-center justify-content-center">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                    <a href="#0" class="icon d-flex align-items-center justify-content-center">
-                                        <i class="fab fa-dribbble"></i>
-                                    </a>
-                                </div>
+                                <h3 class="text-danger">Prihandana</h3>
+                                <p>I ordered, and the item has been sent, really great</p>
                             </div>
                             <div class="image"><img src="https://i.ibb.co/8x9xK4H/team.jpg" alt="" class="img-fluid"></div>
                         </div>
@@ -188,7 +138,6 @@
             </div>
         </div>
     </div>
-
     
     <!-- end container -->
 @endsection

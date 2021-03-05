@@ -2,7 +2,7 @@
 @section('title' , 'Product')
 
 @section('container')
-<div class="container">
+<div class="container" >
     <div class="hero mt-2">
         <div class="row reverse-column h-100">
             <div class="hero-text col-lg-5 col-md-5 col-12 mt-5 d-flex flex-column justify-content-center position-relative">
@@ -41,19 +41,22 @@
                 </ul>
             </div>
             <!-- row 1 -->
-            <div class="row mt-4">
+            <div class="row">
                 <div class="row p-0">
                     @foreach($produk as $prd)
-                    <div class="card product-card col-lg-4" data-aos="flip-right" data-aos-duration="1000">
-                        <div class="imgBox">
-                            <img src="{{ asset('image/product/'.$prd->gambar_produk) }}" alt="" class="shoe">
-                        </div>
-                        <div class="contentBox">
-                            <h3>{{ $prd->nama_produk }}</h3>
-                            <h2 class="price"><small>Rp.</small>{{ $prd->harga_produk }}</h2>
-                            <a href="{{ url('product/detail-product/'.$prd->id) }}" class="buy">Buy Now</a>
+                    <div class="col-lg-3 mt-4">
+                        <div class="card product-card col-lg-12 h-100" data-aos="flip-right" data-aos-duration="1000">
+                            <div class="imgBox">
+                                <img src="{{ asset('image/product/'.$prd->gambar_produk) }}" alt="" class="shoe">
+                            </div>
+                            <div class="contentBox">
+                                <h3 class="text-center">{{ $prd->nama_produk }}</h3>
+                                <h2 class="price"><small>Rp.</small>{{ $prd->harga_produk }}</h2>
+                                <a href="{{ url('product/detail-product/'.$prd->id) }}" class="buy">Buy Now</a>
+                            </div>
                         </div>
                     </div>
+                    
                     @endforeach
                 </div>
             </div>

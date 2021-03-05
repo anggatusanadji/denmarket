@@ -19,7 +19,7 @@ class ProdukController extends Controller
     public function indexview()
     {
         // $kategori = DB::table('films')->get();
-        $produk = Produk::where('tipe_id', 1)->get();
+        $produk = Produk::where('tipe_id', 1 && 'kategori_id', 2)->get();
         return view('home', ['produk' => $produk]);
     }
     public function index()

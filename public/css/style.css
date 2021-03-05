@@ -92,6 +92,7 @@
     margin-right: 30px;
 }
 
+
 /* discount session */
 .discount{
     margin-top: 100px; 
@@ -180,7 +181,7 @@ color: #727f8c;
 }
 .testimonials .box {
 box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-padding: 40px;
+padding: 10px 30px;
 border-radius: 15px;
 margin-bottom: 40px;
 transition: all 0.4s ease-in-out;
@@ -277,7 +278,6 @@ background: #FF4A4A;
   background: #fff;
   border-radius: 20px;
   overflow: hidden;
-  margin: 20px;
 }
 
 .product-card::before {
