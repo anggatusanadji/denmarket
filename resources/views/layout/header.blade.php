@@ -25,7 +25,7 @@
                 <div class="collapse navbar-collapse navbar-denmarket" id="navbarNav">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item {{ Request::is('home') ? 'active' : '' }}">
-                            <a class="nav-link" href="{{url('/home')}}">Home</a>
+                            <a class="nav-link" href="{{url('/')}}">Home</a>
                             <div class="underline-bar"></div>
                         </li>
                         <li class="nav-item {{ Request::is('product/football', 'product/futsal', 'product/running') ? 'active' : '' }}">
@@ -65,7 +65,7 @@
                 <div class="col-xs-6 col-md-3">
                     <h6>Explore</h6>
                     <ul class="footer-links">
-                        <li><a href="{{url('/home')}}">Home</a></li>
+                        <li><a href="{{url('/')}}">Home</a></li>
                         <li><a href="{{url('/product/football')}}">Product</a></li>
                         <li><a href="{{url('/about')}}">About</a></li>
                         <li><a href="{{url('/location')}}">Location</a></li>

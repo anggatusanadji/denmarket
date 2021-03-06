@@ -41,9 +41,9 @@ Route::prefix('dashboard')->middleware(['auth'])->group(function () {
     
 });
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('');
+// });
 
 
 // route view user
@@ -55,7 +55,7 @@ Route::prefix('product')->group(function () {
 });
 Route::view('about', 'about');
 Route::view('location', 'location');
-Route::get('home', 'ProdukController@indexview');
+Route::get('/', 'ProdukController@indexview');
 
 // contact
 Route::get('contact/create', 'ContactController@create');
