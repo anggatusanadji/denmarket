@@ -30,6 +30,7 @@
                         <th scope="col">Nama</th>
                         <th scope="col">Email</th>
                         <th scope="col">Pesan</th>
+                        <th scope="col">Dikirim</th>
                         <th scope="col">Aksi</th>
                     </tr>
                     </thead>
@@ -40,6 +41,7 @@
                             <td>{{ $ktk->nama}}</td>
                             <td>{{ $ktk->email}}</td>
                             <td>{{ $ktk->pesan}}</td>
+                            <td>{{ $ktk->created_at}}</td>
                             <td class="text-center">
                               <a href="mailto:{{$ktk->email}}" class="btn btn-primary">
                                 Balas
