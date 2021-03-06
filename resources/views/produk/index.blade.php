@@ -44,7 +44,10 @@
                       <th scope="row">{{ $loop->iteration }}</th>
                       <td>{{ $prd->nama_produk }}</td>
                       <td>{{ $prd->kategori->nama_kategori }}</td>
-                      <td>{{ $prd->harga_produk }}</td>
+                      @php
+                          $harga = number_format($prd->harga_produk)
+                      @endphp
+                      <td>Rp. {{ $harga }}</td>
                       <td><img src="{{ asset('image/product/'.$prd->gambar_produk) }}" width="100px"></td>
                       <td class="text-center">  
                         <a href="{{ url('dashboard/produk/'.$prd->id) }}" class="btn btn-info">

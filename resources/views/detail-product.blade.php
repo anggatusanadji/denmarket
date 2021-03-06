@@ -21,9 +21,12 @@
                     Size : <br>
                     {{ $produk->size_produk }}
                 </p>
+                @php
+                    $harga = number_format($produk->harga_produk)
+                @endphp
                 <p>
                     Harga : <br>
-                    Rp. {{ $produk->harga_produk }}
+                    Rp. {{ $harga }}
                 </p>
                 <div class="button-buy mt-2">
                     <a type="button" class="btn mr-2" href="https://wa.me/+6283114803923?text=Halo%20Saya%20ingin%20memesan%20sepatu%20{{$produk->nama_produk}}"><i class="fas fa-plus" style="color:#fff;"></i></a>

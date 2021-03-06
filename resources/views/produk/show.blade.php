@@ -36,9 +36,12 @@
                         <th>Size</th>
                         <td>{{ $produk->size_produk }}</td>
                     </tr>
+                    @php
+                        $harga = number_format($produk->harga_produk)
+                    @endphp
                     <tr>
                         <th>Harga</th>
-                        <td>{{ $produk->harga_produk }}</td>
+                        <td>Rp. {{ $harga }}</td>
                     </tr>
                     <tr>
                         <th>Tipe</th>

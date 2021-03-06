@@ -50,8 +50,11 @@
                                 <img src="{{ asset('image/product/'.$prd->gambar_produk) }}" alt="" class="shoe">
                             </div>
                             <div class="contentBox">
+                                @php
+                                    $harga = number_format($prd->harga_produk)
+                                @endphp
                                 <h3 class="text-center">{{ $prd->nama_produk }}</h3>
-                                <h2 class="price"><small>Rp.</small>{{ $prd->harga_produk }}</h2>
+                                <h2 class="price"><small>Rp. </small>{{ $harga }}</h2>
                                 <a href="{{ url('product/detail-product/'.$prd->id) }}" class="buy">Buy Now</a>
                             </div>
                         </div>
