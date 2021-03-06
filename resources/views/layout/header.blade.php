@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
         <link rel="stylesheet" type="text/css" href="{{ asset('/css/style.css') }}">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
 
         <title>@yield('title')</title>
@@ -76,7 +77,7 @@
                     <ul class="footer-links">
                         <li><a href="#">Denpasar - Bali</a></li>
                         <li><a href="mailto:anggatusanadji@gmail.com?subject=Halo!%20Saya%20membutuhkan%20bantuan">denmarket@gmail.com</a></li>
-                        <li><a href="https://wa.me/083114803923?text=Halo!%20Saya%20membutuhkan%20bantuan">083-114-803-923</a></li>
+                        <li><a href="https://wa.me/+6283114803923?text=Halo!%20Saya%20membutuhkan%20bantuan">083-114-803-923</a></li>
                     </ul>
                 </div>
                 </div>

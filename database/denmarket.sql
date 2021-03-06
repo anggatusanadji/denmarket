@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 05, 2021 at 02:42 PM
--- Server version: 10.4.17-MariaDB
--- PHP Version: 8.0.2
+-- Waktu pembuatan: 06 Mar 2021 pada 02.45
+-- Versi server: 10.4.17-MariaDB
+-- Versi PHP: 8.0.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `failed_jobs`
+-- Struktur dari tabel `failed_jobs`
 --
 
 CREATE TABLE `failed_jobs` (
@@ -39,7 +39,7 @@ CREATE TABLE `failed_jobs` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `migrations`
+-- Struktur dari tabel `migrations`
 --
 
 CREATE TABLE `migrations` (
@@ -49,7 +49,7 @@ CREATE TABLE `migrations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `migrations`
+-- Dumping data untuk tabel `migrations`
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
@@ -59,7 +59,7 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_kategori`
+-- Struktur dari tabel `tb_kategori`
 --
 
 CREATE TABLE `tb_kategori` (
@@ -71,7 +71,7 @@ CREATE TABLE `tb_kategori` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tb_kategori`
+-- Dumping data untuk tabel `tb_kategori`
 --
 
 INSERT INTO `tb_kategori` (`id`, `nama_kategori`, `created_at`, `updated_at`, `deleted_at`) VALUES
@@ -82,7 +82,7 @@ INSERT INTO `tb_kategori` (`id`, `nama_kategori`, `created_at`, `updated_at`, `d
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_kontak`
+-- Struktur dari tabel `tb_kontak`
 --
 
 CREATE TABLE `tb_kontak` (
@@ -95,10 +95,17 @@ CREATE TABLE `tb_kontak` (
   `deleted_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data untuk tabel `tb_kontak`
+--
+
+INSERT INTO `tb_kontak` (`id`, `nama`, `email`, `pesan`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(2, 'Angga Tusan Adji', 'anggatusanadji@gmail.com', 'Sepatunya sangat berkualitas, sangat nyaman untuk dipakai', '2021-03-05 17:27:51', '2021-03-05 17:27:51', NULL);
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_produk`
+-- Struktur dari tabel `tb_produk`
 --
 
 CREATE TABLE `tb_produk` (
@@ -116,18 +123,18 @@ CREATE TABLE `tb_produk` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tb_produk`
+-- Dumping data untuk tabel `tb_produk`
 --
 
 INSERT INTO `tb_produk` (`id`, `nama_produk`, `deskripsi_produk`, `kategori_id`, `size_produk`, `harga_produk`, `tipe_id`, `gambar_produk`, `created_at`, `updated_at`, `deleted_at`) VALUES
 (1, 'Adidas c7', 'Shoes that use white dominance with blue patterns and also the Adidas logo on the right and left of the shoes are black', 2, '43, 44, 45, 46', '300000', 3, '1614829642.png', '2021-03-03 19:47:22', '2021-03-04 17:40:20', NULL),
-(3, 'New Balance Furon 4.0', 'Shoes that use black dominance with a green gradient towards the front, these shoes use the number 1 quality of material, very light and comfortable to wear.', 2, '43 ,44, 45', '279000', 1, '1614904795.png', '2021-03-03 19:55:49', '2021-03-05 03:24:32', NULL),
+(3, 'New Balance Furon 4.0', 'Shoes that use black dominance with a green gradient towards the front, these shoes use the number 1 quality of material, very light and comfortable to wear.', 2, '43 ,44, 45', '279000', 3, '1614904795.png', '2021-03-03 19:55:49', '2021-03-05 17:06:44', NULL),
 (4, 'Nike Mercurial Superfly 7 Elite FG', '360-degree Flyknit construction wraps your foot for a second-skin fit. New high-tenacity yarn and a 1-piece lining create a close, secure feel on the field. A new ultra-thin NIKESKIN overlay gets you closer to the ball for high-speed maneuvers', 2, '43 , 44, 45, 46', '599000', 1, '1614904970.png', '2021-03-04 16:42:50', '2021-03-04 16:42:50', NULL),
 (5, 'Adidas Dribble Fly J4', 'Shoes that use black dominance by containing a purple part under the back of the shoe and the top of the shoe, a shoe that looks very elegant for you to play on the field', 2, '43, 44, 45, 46, 47', '450000', 1, '1614905210.png', '2021-03-04 16:46:50', '2021-03-04 17:42:23', NULL),
 (6, 'Adidas White Simple F5', 'Shoes that create an elegant impression with a fairly simple design, dominated by white and a pattern on the side of the shoe, and contain a logo on the front', 2, '42, 43, 44, 45, 46, 47', '330000', 1, '1614932519.png', '2021-03-04 16:56:21', '2021-03-05 00:21:59', NULL),
 (7, 'Nike Vapor XII Elite White', 'Shoes that use white dominance with a black pattern on the front, prioritizing the quality of contemporary designs, make you look more powerful in the field', 2, '41, 42, 43, 44, 45', '450000', 3, '1614944010.png', '2021-03-05 03:33:30', '2021-03-05 03:33:30', NULL),
 (8, 'Adidas Predator', 'You can\'t change the game till you let the game change you. Every match is a chance to be bigger, better. More in control. Unleash your full force of nature in Predator Freak.', 2, '43, 44, 45, 46', '899000', 3, '1614944282.png', '2021-03-05 03:38:02', '2021-03-05 03:38:02', NULL),
-(9, 'New Balance Visaro 2.0', 'The playmakers’ choice; for the artists of the game, who strive to perform with daring creativity. The Visaro 2.0 features a performance ergonomic last with a lower toe spring and a PU synthetic upper for superior fit and comfort.', 2, '43, 44, 45, 46', '500000', 3, '1614944662.png', '2021-03-05 03:44:22', '2021-03-05 03:44:22', NULL),
+(9, 'New Balance Visaro 2.0', 'The playmakers’ choice; for the artists of the game, who strive to perform with daring creativity. The Visaro 2.0 features a performance ergonomic last with a lower toe spring and a PU synthetic upper for superior fit and comfort.', 2, '43, 44, 45, 46', '500000', 1, '1614944662.png', '2021-03-05 03:44:22', '2021-03-05 16:18:07', NULL),
 (10, 'Nike Elastico Collection', 'Take our most innovative boot to the next level in the bike elastico. After analyzing thousands of footballs specific moves, a material was added to the flyknit to give you better touch and control of the ball', 1, '43, 44, 45, 46', '799000', 3, '1614945536.png', '2021-03-05 03:58:56', '2021-03-05 03:58:56', NULL),
 (11, 'Nike football X Heritage', 'Take our most innovative boot to the next level in the bike elastico. After analyzing thousands of footballs specific moves, a material was added to the flyknit to give you better touch and control of the ball', 1, '43, 44, 45, 46', '300000', 3, '1614945709.png', '2021-03-05 04:01:49', '2021-03-05 04:01:49', NULL),
 (12, 'Nike Mercurial Superfly 7 Elite IC', 'Take our most innovative boot to the next level in the bike elastico. After analyzing thousands of footballs specific moves, a material was added to the flyknit to give you better touch and control of the ball', 1, '43, 44, 45, 46', '700000', 3, '1614945829.png', '2021-03-05 04:03:49', '2021-03-05 04:03:49', NULL),
@@ -144,7 +151,7 @@ INSERT INTO `tb_produk` (`id`, `nama_produk`, `deskripsi_produk`, `kategori_id`,
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_tipe_produk`
+-- Struktur dari tabel `tb_tipe_produk`
 --
 
 CREATE TABLE `tb_tipe_produk` (
@@ -156,7 +163,7 @@ CREATE TABLE `tb_tipe_produk` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tb_tipe_produk`
+-- Dumping data untuk tabel `tb_tipe_produk`
 --
 
 INSERT INTO `tb_tipe_produk` (`id`, `tipe_produk`, `created_at`, `updated_at`, `deleted_at`) VALUES
@@ -167,7 +174,7 @@ INSERT INTO `tb_tipe_produk` (`id`, `tipe_produk`, `created_at`, `updated_at`, `
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Struktur dari tabel `users`
 --
 
 CREATE TABLE `users` (
@@ -183,7 +190,7 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `users`
+-- Dumping data untuk tabel `users`
 --
 
 INSERT INTO `users` (`id`, `name`, `username`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
@@ -194,31 +201,31 @@ INSERT INTO `users` (`id`, `name`, `username`, `email`, `email_verified_at`, `pa
 --
 
 --
--- Indexes for table `failed_jobs`
+-- Indeks untuk tabel `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `migrations`
+-- Indeks untuk tabel `migrations`
 --
 ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tb_kategori`
+-- Indeks untuk tabel `tb_kategori`
 --
 ALTER TABLE `tb_kategori`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tb_kontak`
+-- Indeks untuk tabel `tb_kontak`
 --
 ALTER TABLE `tb_kontak`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tb_produk`
+-- Indeks untuk tabel `tb_produk`
 --
 ALTER TABLE `tb_produk`
   ADD PRIMARY KEY (`id`),
@@ -226,70 +233,70 @@ ALTER TABLE `tb_produk`
   ADD KEY `kategori_id` (`kategori_id`);
 
 --
--- Indexes for table `tb_tipe_produk`
+-- Indeks untuk tabel `tb_tipe_produk`
 --
 ALTER TABLE `tb_tipe_produk`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `users`
+-- Indeks untuk tabel `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `users_email_unique` (`email`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `failed_jobs`
+-- AUTO_INCREMENT untuk tabel `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `migrations`
+-- AUTO_INCREMENT untuk tabel `migrations`
 --
 ALTER TABLE `migrations`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `tb_kategori`
+-- AUTO_INCREMENT untuk tabel `tb_kategori`
 --
 ALTER TABLE `tb_kategori`
   MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `tb_kontak`
+-- AUTO_INCREMENT untuk tabel `tb_kontak`
 --
 ALTER TABLE `tb_kontak`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `tb_produk`
+-- AUTO_INCREMENT untuk tabel `tb_produk`
 --
 ALTER TABLE `tb_produk`
   MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
--- AUTO_INCREMENT for table `tb_tipe_produk`
+-- AUTO_INCREMENT untuk tabel `tb_tipe_produk`
 --
 ALTER TABLE `tb_tipe_produk`
   MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT untuk tabel `users`
 --
 ALTER TABLE `users`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- Constraints for dumped tables
+-- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
 
 --
--- Constraints for table `tb_produk`
+-- Ketidakleluasaan untuk tabel `tb_produk`
 --
 ALTER TABLE `tb_produk`
   ADD CONSTRAINT `tb_produk_ibfk_2` FOREIGN KEY (`tipe_id`) REFERENCES `tb_tipe_produk` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,

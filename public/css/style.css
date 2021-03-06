@@ -91,6 +91,48 @@
     font-size:40px;
     margin-right: 30px;
 }
+.MultiCarousel { 
+  float: left; 
+  overflow: hidden; 
+  padding: 15px; 
+  width: 100%; 
+  position:relative; }
+.MultiCarousel .MultiCarousel-inner { 
+  transition: 1s ease all; 
+  float: left; }
+.MultiCarousel .MultiCarousel-inner .item { 
+  float: left;
+}
+.MultiCarousel .MultiCarousel-inner .item > div { 
+  text-align: center; 
+  padding:30px 10px; 
+  margin:10px; 
+}
+.MultiCarousel .leftLst, .MultiCarousel .rightLst { 
+  position:absolute; 
+  border-radius:50%;
+  top:calc(50% - 20px); 
+}
+.MultiCarousel .leftLst { 
+  left:0; 
+}
+.MultiCarousel .rightLst { 
+  right:0; 
+}
+.MultiCarousel .leftLst.over, .MultiCarousel .rightLst.over { 
+  pointer-events: none; 
+  background:#ccc; 
+}
+.MultiCarousel .MultiCarousel-inner .box {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  padding: 10px 30px;
+  border-radius: 15px;
+  margin-bottom: 40px;
+  transition: all 0.4s ease-in-out;
+  }
+.MultiCarousel .MultiCarousel-inner .box:hover {
+  transform: translateY(-7px);
+}
 
 
 /* discount session */

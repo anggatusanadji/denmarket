@@ -44,7 +44,7 @@
                 <div class="row" id="trending">
                     <p class="font-weight-bold trending-title ml-auto" id="scroll-bawah"><span style="color: #FF4A4A">Trending</span> Collection</p>
                 </div>
-                <div class="row">   
+                {{-- <div class="row">   
                     @foreach($produk as $prd)
                     <div class="col-lg-4">
                         <div class="card col-lg-12" data-aos="fade-up" data-aos-duration="1000">
@@ -52,8 +52,26 @@
                         </div>
                     </div>
                     @endforeach
+                </div> --}}
+                
+                <div class="row">
+                    <div class="MultiCarousel" data-items="1,3,4,6" data-slide="1" id="MultiCarousel"  data-interval="1000">
+                        <div class="MultiCarousel-inner">
+                            @foreach($produk as $prd)
+                            <div class="item">
+                                <div class="pad15 box">
+                                    <a href="{{ url('product/detail-product/'.$prd->id) }}">
+                                        <img src="{{ asset('image/product/'.$prd->gambar_produk) }}" alt="" class="w-100 h-100">
+                                    </a>
+                                </div>
+                            </div>
+                            @endforeach
+                        </div>
+                        <button class="btn leftLst"><i class="fa fa-arrow-left fa-sm" aria-hidden="true"></i></button>
+                        <button class="btn rightLst"><i class="fa fa-arrow-right fa-sm" aria-hidden="true"></i></button>
+                    </div>
                 </div>
-              
+
                 <div class="row">
                     <div class="show mx-auto mt-3" data-aos="fade-up" data-aos-duration="750">
                         <a type="button" class="btn mr-2" href="{{url('product/football')}}"><i class="fas fa-chevron-down" style="color:#fff;"></i></a>
@@ -138,5 +156,113 @@
         </div>
     </div>
     
+    <script>
+    $(document).ready(function () {
+        var itemsMainDiv = ('.MultiCarousel');
+        var itemsDiv = ('.MultiCarousel-inner');
+        var itemWidth = "";
+
+        $('.leftLst, .rightLst').click(function () {
+            var condition = $(this).hasClass("leftLst");
+            if (condition)
+                click(0, this);
+            else
+                click(1, this)
+        });
+
+        ResCarouselSize();
+
+
+
+
+        $(window).resize(function () {
+            ResCarouselSize();
+        });
+
+        //this function define the size of the items
+        function ResCarouselSize() {
+            var incno = 0;
+            var dataItems = ("data-items");
+            var itemClass = ('.item');
+            var id = 0;
+            var btnParentSb = '';
+            var itemsSplit = '';
+            var sampwidth = $(itemsMainDiv).width();
+            var bodyWidth = $('body').width();
+            $(itemsDiv).each(function () {
+                id = id + 1
+                var itemNumbers = $(this).find(itemClass).length;
+                btnParentSb = $(this).parent().attr(dataItems);
+                itemsSplit = btnParentSb.split(',');
+                $(this).parent().attr("id", "MultiCarousel" + id);
+
+
+                if (bodyWidth >= 1200) {
+                    incno = itemsSplit[2];
+                    itemWidth = sampwidth / incno;
+                }
+                else if (bodyWidth >= 992) {
+                    incno = itemsSplit[2];
+                    itemWidth = sampwidth / incno;
+                }
+                else if (bodyWidth >= 768) {
+                    incno = itemsSplit[1];
+                    itemWidth = sampwidth / incno;
+                }
+                else {
+                    incno = itemsSplit[0];
+                    itemWidth = sampwidth / incno;
+                }
+                $(this).css({ 'transform': 'translateX(0px)', 'width': itemWidth * itemNumbers });
+                $(this).find(itemClass).each(function () {
+                    $(this).outerWidth(itemWidth);
+                });
+
+                $(".leftLst").addClass("over");
+                $(".rightLst").removeClass("over");
+
+            });
+        }
+
+
+        //this function used to move the items
+        function ResCarousel(e, el, s) {
+            var leftBtn = ('.leftLst');
+            var rightBtn = ('.rightLst');
+            var translateXval = '';
+            var divStyle = $(el + ' ' + itemsDiv).css('transform');
+            var values = divStyle.match(/-?[\d\.]+/g);
+            var xds = Math.abs(values[4]);
+            if (e == 0) {
+                translateXval = parseInt(xds) - parseInt(itemWidth * s);
+                $(el + ' ' + rightBtn).removeClass("over");
+
+                if (translateXval <= itemWidth / 2) {
+                    translateXval = 0;
+                    $(el + ' ' + leftBtn).addClass("over");
+                }
+            }
+            else if (e == 1) {
+                var itemsCondition = $(el).find(itemsDiv).width() - $(el).width();
+                translateXval = parseInt(xds) + parseInt(itemWidth * s);
+                $(el + ' ' + leftBtn).removeClass("over");
+
+                if (translateXval >= itemsCondition - itemWidth / 2) {
+                    translateXval = itemsCondition;
+                    $(el + ' ' + rightBtn).addClass("over");
+                }
+            }
+            $(el + ' ' + itemsDiv).css('transform', 'translateX(' + -translateXval + 'px)');
+        }
+
+        //It is used to get some elements from btn
+        function click(ell, ee) {
+            var Parent = "#" + $(ee).parent().attr("id");
+            var slide = $(Parent).attr("data-slide");
+            ResCarousel(ell, Parent, slide);
+        }
+
+    });
+    </script>
     <!-- end container -->
 @endsection

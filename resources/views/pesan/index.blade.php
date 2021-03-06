@@ -41,6 +41,9 @@
                             <td>{{ $ktk->email}}</td>
                             <td>{{ $ktk->pesan}}</td>
                             <td class="text-center">
+                              <a href="mailto:{{$ktk->email}}" class="btn btn-primary">
+                                Balas
+                              </a>
                               <form action="{{ url('dashboard/pesan/'.$ktk->id) }}" method="post" class="d-inline" onsubmit="return confirm('Anda Yakin Ingin Menghapus Kategori {{$ktk->nama}}?')">
                                 @method('delete')
                                 @csrf
