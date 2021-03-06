@@ -42,19 +42,18 @@
         <div class="trending">
             <div class="container"">
                 <div class="row" id="trending">
-                    <p class="font-weight-bold trending-title ml-auto" id="scroll-bawah><span style="color: #FF4A4A">Trending</span> Collection</p>
+                    <p class="font-weight-bold trending-title ml-auto" id="scroll-bawah"><span style="color: #FF4A4A">Trending</span> Collection</p>
                 </div>
-                <div class="row">    
-                    <div class="card-deck">
-                        @foreach($produk as $prd)
-                        <div class="col-lg-3">
-                            <div class="card col-lg-12 col-12" data-aos="fade-up" data-aos-duration="1000">
-                                <img src="{{ asset('image/product/'.$prd->gambar_produk) }}" alt="" class="w-100 h-100">
-                            </div>
+                <div class="row">   
+                    @foreach($produk as $prd)
+                    <div class="col-lg-4">
+                        <div class="card col-lg-12" data-aos="fade-up" data-aos-duration="1000">
+                            <img src="{{ asset('image/product/'.$prd->gambar_produk) }}" alt="" class="w-100 h-100">
                         </div>
-                        @endforeach
                     </div>
+                    @endforeach
                 </div>
+              
                 <div class="row">
                     <div class="show mx-auto mt-3" data-aos="fade-up" data-aos-duration="750">
                         <a type="button" class="btn mr-2" href="{{url('product/football')}}"><i class="fas fa-chevron-down" style="color:#fff;"></i></a>
@@ -80,7 +79,7 @@
                                 <h3 class="text-danger">Gana Untaran</h3>
                                 <p>A very good product, prioritizing quality and user comfort</p>
                             </div>
-                            <div class="image"><img src="https://i.ibb.co/8x9xK4H/team.jpg" alt="" class="img-fluid"></div>
+                            <div class="image"><img src="{{asset('image/testi1.png')}}" alt="" class="img-fluid"></div>
                         </div>
                     </div>
                     <!-- Box-2 -->
@@ -90,7 +89,7 @@
                                 <h3 class="text-danger">Surya Amerta</h3>
                                 <p>a good shop, selling quality products at the right price</p>
                             </div>
-                            <div class="image h-80"><img src="https://i.ibb.co/8x9xK4H/team.jpg" alt="" class="img-fluid"></div>
+                            <div class="image h-80"><img src="{{asset('image/testi2.png')}}" alt="" class="img-fluid"></div>
                         </div>
                     </div>
                 </div>
@@ -102,7 +101,7 @@
                                 <h3 class="text-danger">Wahyu Purnama</h3>
                                 <p>very trustworthy shop, great. I will buy it here again</p>
                             </div>
-                            <div class="image"><img src="https://i.ibb.co/8x9xK4H/team.jpg" alt="" class="img-fluid"></div>
+                            <div class="image"><img src="{{asset('image/testi3.png')}}" alt="" class="img-fluid"></div>
                         </div>
                     </div>
                     <!-- Box-4 -->
@@ -112,7 +111,7 @@
                                 <h3 class="text-danger">Prihandana</h3>
                                 <p>I ordered, and the item has been sent, really great</p>
                             </div>
-                            <div class="image"><img src="https://i.ibb.co/8x9xK4H/team.jpg" alt="" class="img-fluid"></div>
+                            <div class="image"><img src="{{asset('image/testi4.png')}}" alt="" class="img-fluid"></div>
                         </div>
                     </div>
                 </div>

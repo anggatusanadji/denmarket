@@ -65,7 +65,7 @@
                     <h6>Explore</h6>
                     <ul class="footer-links">
                         <li><a href="{{url('/home')}}">Home</a></li>
-                        <li><a href="{{url('/product')}}">Product</a></li>
+                        <li><a href="{{url('/product/football')}}">Product</a></li>
                         <li><a href="{{url('/about')}}">About</a></li>
                         <li><a href="{{url('/location')}}">Location</a></li>
                     </ul>
@@ -75,8 +75,8 @@
                     <h6>Contact Us</h6>
                     <ul class="footer-links">
                         <li><a href="#">Denpasar - Bali</a></li>
-                        <li><a href="#">denmarket@gmail.com</a></li>
-                        <li><a href="#">083-114-803-923</a></li>
+                        <li><a href="mailto:anggatusanadji@gmail.com?subject=Halo!%20Saya%20membutuhkan%20bantuan">denmarket@gmail.com</a></li>
+                        <li><a href="https://wa.me/083114803923?text=Halo!%20Saya%20membutuhkan%20bantuan">083-114-803-923</a></li>
                     </ul>
                 </div>
                 </div>

@@ -26,8 +26,8 @@
                     Rp. {{ $produk->harga_produk }}
                 </p>
                 <div class="button-buy mt-2">
-                    <a type="button" class="btn mr-2" href="https://wa.me/083114803923?text=Halo%20Saya%20ingin%20memesan%20sepatu%20"><i class="fas fa-plus" style="color:#fff;"></i></a>
-                    <a class="font-weight-normal mr-2" href="https://wa.me/083114803923?text=Halo%20Saya%20ingin%20memesan%20sepatu%20">Buy Now</a>
+                    <a type="button" class="btn mr-2" href="https://wa.me/083114803923?text=Halo%20Saya%20ingin%20memesan%20sepatu%20{{$produk->nama_produk}}"><i class="fas fa-plus" style="color:#fff;"></i></a>
+                    <a class="font-weight-normal mr-2" href="https://wa.me/083114803923?text=Halo%20Saya%20ingin%20memesan%20sepatu%20{{$produk->nama_produk}}">Buy Now</a>
                     <img src="{{ asset('image/line.svg') }}" alt="" style="width:30px;">
                 </div>
             </div>
