@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 06 Mar 2021 pada 08.07
+-- Waktu pembuatan: 06 Mar 2021 pada 08.43
 -- Versi server: 10.4.17-MariaDB
 -- Versi PHP: 8.0.2
 
@@ -100,7 +100,7 @@ CREATE TABLE `tb_kontak` (
 --
 
 INSERT INTO `tb_kontak` (`id`, `nama`, `email`, `pesan`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(2, 'Angga Tusan Adji', 'anggatusanadji@gmail.com', 'Sepatunya sangat berkualitas, sangat nyaman untuk dipakai', '2021-03-05 17:27:51', '2021-03-05 17:27:51', NULL);
+(3, 'Angga Tusan Adji', 'anggatusanadji@gmail.com', 'produk yang dijual sangat berkualitas', '2021-03-06 07:42:21', '2021-03-06 07:42:21', NULL);
 
 -- --------------------------------------------------------
 
@@ -272,7 +272,7 @@ ALTER TABLE `tb_kategori`
 -- AUTO_INCREMENT untuk tabel `tb_kontak`
 --
 ALTER TABLE `tb_kontak`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_produk`
