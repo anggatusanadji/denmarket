@@ -92,10 +92,9 @@
 
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <ul class="social-icons">
-                        <li><a class="facebook" href="#"><i class="fab fa-facebook"></i></a></li>
-                        <li><a class="twitter" href="#"><i class="fab fa-twitter"></i></a></li>
-                        <li><a class="instagram" href="#"><i class="fab fa-instagram"></i></a></li>
-                        <li><a class="whatsapp" href="#"><i class="fab fa-whatsapp"></i></a></li>   
+                        <li><a class="facebook" href="https://www.facebook.com/angga.tusan.24/"><i class="fab fa-facebook"></i></a></li>
+                        <li><a class="instagram" href="https://www.instagram.com/anggatus/"><i class="fab fa-instagram"></i></a></li>
+                        <li><a class="whatsapp" href="https://wa.me/+6283114803923"><i class="fab fa-whatsapp"></i></a></li>   
                     </ul>
                 </div>
                 </div>

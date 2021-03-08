@@ -136,7 +136,7 @@
             </div>
         </section>
 
-        <div class="discount">
+        {{-- <div class="discount">
             <div class="card" data-aos="zoom-in" data-aos-duration="500">
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-6 p-5">
@@ -153,7 +153,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
     </div>
     
     <script>
