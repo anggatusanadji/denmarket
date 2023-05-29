@@ -6,6 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <!-- Bootstrap CSS -->
+        
+        <link rel="shortcut icon" href="{{asset('image/hero.png')}}"/>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
         <link rel="stylesheet" type="text/css" href="{{ asset('/css/style.css') }}">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
@@ -24,11 +26,11 @@
                 </button>
                 <div class="collapse navbar-collapse navbar-denmarket" id="navbarNav">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item {{ Request::is('home') ? 'active' : '' }}">
+                        <li class="nav-item {{ Request::is('/') ? 'active' : '' }}">
                             <a class="nav-link" href="{{url('/')}}">Home</a>
                             <div class="underline-bar"></div>
                         </li>
-                        <li class="nav-item {{ Request::is('product/football', 'product/futsal', 'product/running') ? 'active' : '' }}">
+                        <li class="nav-item {{ Request::is('product/football', 'product/futsal', 'product/running', 'product/detail-product/') ? 'active' : '' }}">
                             <a class="nav-link" href="{{url('/product/football')}}">Product</a>
                             <div class="underline-bar"></div>
                         </li>

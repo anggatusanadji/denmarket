@@ -19,14 +19,14 @@ class ProdukController extends Controller
     public function indexview()
     {
         // $kategori = DB::table('films')->get();
-        $produk = Produk::where('tipe_id', 1 && 'kategori_id', 2)->get();
+        $produk = Produk::where('tipe_id', 1)->get();
         return view('home', ['produk' => $produk]);
     }
     public function index()
     {
         // $kategori = DB::table('films')->get();
         $produk = Produk::all();
-        return view('produk.index', ['produk' => $produk]);
+        return view('produk.index', compact('produk'));
     }
     public function indexfutsal()
     {
@@ -53,10 +53,10 @@ class ProdukController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {  
+    {
         $kategori = Kategori::all();
         $tipe = Tipe::all();
-        return view('produk.create', compact('kategori','tipe'));
+        return view('produk.create', compact('kategori', 'tipe'));
     }
 
     /**
@@ -69,16 +69,16 @@ class ProdukController extends Controller
     {
         $request->validate([
             'nama_produk' => 'required',
-            'deskripsi_produk' => 'required', 
-            'kategori_id' => 'required', 
-            'size_produk' => 'required', 
+            'deskripsi_produk' => 'required',
+            'kategori_id' => 'required',
+            'size_produk' => 'required',
             'harga_produk' => 'required',
             'tipe_id' => 'required',
             'gambar_produk' => 'required|image|mimes:jpg,jpeg,png|max:2048'
         ]);
 
         $img = $request->file('gambar_produk');
-        $gambar_produk = time(). "." .$img->getClientOriginalExtension();
+        $gambar_produk = time() . "." . $img->getClientOriginalExtension();
         $upDir = 'image/product';
         $img->move($upDir, $gambar_produk);
 
@@ -123,7 +123,7 @@ class ProdukController extends Controller
         $kategori = Kategori::all();
         $tipe = Tipe::all();
 
-        return view('produk.edit', compact('kategori','tipe','produk'));
+        return view('produk.edit', compact('kategori', 'tipe', 'produk'));
     }
 
     /**
@@ -133,50 +133,73 @@ class ProdukController extends Controller
      * @param  \App\Produk  $produk
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $produk)
     {
-        $produk = Produk::where('id', $id)->first();
+        // $produk = Produk::where('id', $id)->first();
 
-        $this->validate($request, [
-            'gambar_produk' => 'image|mimes:jpeg,png,jpg|max:2048'
+        // $this->validate($request, [
+        //     'gambar_produk' => 'image|mimes:jpeg,png,jpg|max:2048'
+        // ]);
+
+        // if ($request->hasfile('gambar_produk')) {
+
+        //     File::delete('image/product/' . $produk->gambar_produk);
+
+        //     $img = $request->file('gambar_produk');
+        //     $img_name = time() . "." . $img->getClientOriginalExtension();
+
+        //     $upDir = 'image/product';
+        //     $img->move($upDir, $img_name);
+
+        //     Produk::where('id', $id)->update([
+        //         'nama_produk' => $request->nama_produk,
+        //         'deskripsi_produk' => $request->deskripsi_produk,
+        //         'kategori_id' => $request->kategori_id,
+        //         'size_produk' => $request->size_produk,
+        //         'harga_produk' => $request->harga_produk,
+        //         'tipe_id' => $request->tipe_id,
+        //         'gambar_produk' => $img_name,
+        //     ]);
+        // } else {
+
+        //     Produk::where('id', $produk->id)
+        //         ->update([
+        //             'nama_produk' => $request->nama_produk,
+        //             'deskripsi_produk' => $request->deskripsi_produk,
+        //             'kategori_id' => $request->kategori_id,
+        //             'size_produk' => $request->size_produk,
+        //             'harga_produk' => $request->harga_produk,
+        //             'tipe_id' => $request->tipe_id
+        //         ]);
+        // }
+
+        $data = $request->only([
+            'nama_produk',
+            'kategori_id',
+            'deskripsi_produk',
+            'size_produk',
+            'harga_produk',
+            'tipe_id'
         ]);
 
-        if($request->hasfile('gambar_produk')){
-
-            File::delete('image/product/'.$produk->gambar_produk);
-
+        if ($request->hasFile('gambar_produk')) {
             $img = $request->file('gambar_produk');
-            $img_name = time(). "." .$img->getClientOriginalExtension();
+            $img_name = time() . "." . $img->getClientOriginalExtension();
 
             $upDir = 'image/product';
             $img->move($upDir, $img_name);
 
-            Produk::where('id', $id)->update([
-                'nama_produk' => $request->nama_produk,
-                'deskripsi_produk' => $request->deskripsi_produk,
-                'kategori_id' => $request->kategori_id,
-                'size_produk' => $request->size_produk,
-                'harga_produk' => $request->harga_produk,
-                'tipe_id' => $request->tipe_id,
-                'gambar_produk' => $img_name,
-            ]);
+            File::delete('image/product/' . $produk->gambar_produk);
 
-        }else{
-            
-            Produk::where('id', $produk->id)
-            ->update([
-            'nama_produk' => $request->nama_produk,
-            'deskripsi_produk' => $request->deskripsi_produk,
-            'kategori_id' => $request->kategori_id,
-            'size_produk' => $request->size_produk,
-            'harga_produk' => $request->harga_produk,
-            'tipe_id' => $request->tipe_id
-        ]);
+            $data['gambar_produk'] = $img_name;
         }
 
-        return redirect('/dashboard/produk')->with('status', 'Data Produk Berhasil Diubah!');
+
+        $produk->update($data);
+
+        return redirect('/dashboard/produk')->with('status', 'Data Produk Berhail Diubah!');
     }
-    
+
 
     /**
      * Remove the specified resource from storage.

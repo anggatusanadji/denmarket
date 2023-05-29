@@ -17,7 +17,7 @@ class KategoriController extends Controller
     {
         // $kategori = DB::table('films')->get();
         $kategori = Kategori::all();
-        return view('kategori.index', ['kategori' => $kategori]);
+        return view('kategori.index', compact('kategori'));
     }
 
     /**
@@ -44,7 +44,6 @@ class KategoriController extends Controller
 
         Kategori::create($request->all());
         return redirect('/dashboard/kategori')->with('status', 'Data Kategori Berhasil Ditambahkan.');
-        
     }
 
     /**
@@ -79,7 +78,7 @@ class KategoriController extends Controller
     public function update(Request $request, Kategori $kategori)
     {
         $request->validate([
-            'nama_kategori' => 'required' 
+            'nama_kategori' => 'required'
         ]);
 
         Kategori::where('id', $kategori->id)

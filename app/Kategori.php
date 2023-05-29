@@ -8,8 +8,8 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Kategori extends Model
 {
     use SoftDeletes;
-    
-    protected $table="tb_kategori";
+
+    protected $table = "tb_kategori";
     protected $fillable = ['nama_kategori'];
 
     public function produk()

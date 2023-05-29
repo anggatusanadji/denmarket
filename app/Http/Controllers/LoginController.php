@@ -15,9 +15,10 @@ class LoginController extends Controller
      * @return Response
      */
 
-     public function login(){
-         return view('auth.login');
-     }
+    public function login()
+    {
+        return view('auth.login');
+    }
     public function authenticate(Request $request)
     {
         $credentials = $request->only('username', 'password');
@@ -28,7 +29,8 @@ class LoginController extends Controller
         }
     }
 
-    public function logout(){
+    public function logout()
+    {
         Auth::logout();
         return redirect('login');
     }

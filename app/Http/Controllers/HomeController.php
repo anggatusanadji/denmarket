@@ -31,7 +31,7 @@ class HomeController extends Controller
         $jumlah_kategori = Kategori::all()->count();
         $jumlah_pesan = Kontak::all()->count();
         $jumlah_admin = User::all()->count();
-        
+
         return view('dashboard', compact('jumlah_produk', 'jumlah_kategori', 'jumlah_pesan', 'jumlah_admin'));
     }
 }

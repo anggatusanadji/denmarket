@@ -22,7 +22,7 @@
                     <div class="row session-about-reverse mt-3">
                         <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-duration="750">
                             <p class="text-right">Presenting a wide selection of the best products with the right photos, accurate descriptions, and competitive prices. You Will not disappoint.</p>
-                        </div>
+                        </div>df
                         <div class="col-lg-6" data-aos="zoom-in" data-aos-duration="750">
                             <img src="{{asset('image/about-mask-2.png')}}" alt="">
                         </div>

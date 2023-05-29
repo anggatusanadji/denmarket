@@ -38,7 +38,6 @@ Route::prefix('dashboard')->middleware(['auth'])->group(function () {
     Route::get('pesan', 'ContactController@index');
     Route::delete('pesan/{kontak}', 'ContactController@destroy');
     Route::get('logout', 'LoginController@logout')->name('logout');
-    
 });
 
 // Route::get('/', function () {
@@ -60,4 +59,3 @@ Route::get('/', 'ProdukController@indexview');
 // contact
 Route::get('contact/create', 'ContactController@create');
 Route::post('contact', 'ContactController@store');
-
